@@ -2,23 +2,23 @@
 
 // Put your code below:
 #include <stdio.h>
-#define NUMS 10  //define magic number
-int main(void) //start code
+#define NUMS 10  
+int main(void)
 {
-	int i, j, highTemp[NUMS], lowTemp[NUMS]; //variables
+	int i, j, highTemp[NUMS], lowTemp[NUMS];                                        //variables
 	
 	printf("---=== IPC Temperature Calculator V2.0 ===---\n");
-	printf("Please enter the number of days, between 3 and 10, inclusive: "); //asks user entry
+	printf("Please enter the number of days, between 3 and 10, inclusive: ");       //asks user entry
 	scanf("%d", &i);  //accept user entry
 	printf("\n");
 
-	while (i < 3 || i > NUMS) //while loop to set condition for number of days
+	while (i < 3 || i > NUMS)                                                       //while loop to set condition for number of days
 	{
 		printf("Invalid entry, please enter a number between 3 and 10, inclusive: ");
 		scanf("%d", &i);
 	}
 	printf("\n");
-	for (j = 0; j < i; j++) {  //for loop for parallel array
+	for (j = 0; j < i; j++) {                                                       //for loop for parallel array
 		printf("Day %d - High: ", j + 1);
 		scanf("%d", &highTemp[j]);
 
@@ -28,11 +28,11 @@ int main(void) //start code
 
 	printf("\nDay  Hi  Low\n");
 
-	for (j = 0; j < i; j++) {  //for loop to display parallel array
+	for (j = 0; j < i; j++) {                                                       //for loop to display parallel array
 		printf("%d    %d    %d\n", j + 1, highTemp[j], lowTemp[j]);
 	}
 
-	return 0; //ends code
+	return 0;                                                                       //ends code
 }
 
 /* OUTPUT
