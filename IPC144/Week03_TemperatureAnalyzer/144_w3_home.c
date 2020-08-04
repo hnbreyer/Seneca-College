@@ -60,3 +60,35 @@ int main(void)                                                                 /
 
 	return 0;                                                               //ends code
 }
+
+/* OUTPUT
+---=== IPC Temperature Analyzer ===---
+Enter the high value for day 1: 8
+
+Enter the low value for day 1: -2
+
+Enter the high value for day 2: 9
+
+Enter the low value for day 2: -4
+
+Enter the high value for day 3: 5
+
+Enter the low value for day 3: 11
+
+Incorrect values, temperatures must be in the range -40 to 40, high must be greater than low.
+
+Enter the high value for day 3: 11
+
+Enter the low value for day 3: 5
+
+Enter the high value for day 4: 10
+
+Enter the low value for day 4: 3
+
+The average (mean) LOW temperature was: 0.50
+The average (mean) HIGH temperature was: 9.50
+The average (mean) temperature was: 5.00
+The highest temperature was 11, on day 3
+The lowest temperature was -4, on day 2
+
+*/
