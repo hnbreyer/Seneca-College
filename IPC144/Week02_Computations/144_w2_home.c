@@ -3,7 +3,7 @@
 // Paste your in-lab code below and upgrade it to the at-home specifications
 
 #include <stdio.h>
-int main(void)  //main command; initiates the code
+int main(void)                                                            //main command; initiates the code
 {
 	double amount;
 	float gst;
