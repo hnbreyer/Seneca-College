@@ -60,3 +60,14 @@ int main(void)                                                            //main
 	return 0;                                                      //program finished
 
 }
+
+/*OUTPUT
+Please enter the amount to be paid: $8.68
+GST: 1.13
+Balance owing: $9.81
+Loonies required: 9, balance owing $0.81
+Quarters required: 3, balance owing $0.06
+Dimes required: 0, balance owing $0.06
+Nickels required: 1, balance owing $0.01
+Pennies required: 1, balance owing $0.00
+*/
