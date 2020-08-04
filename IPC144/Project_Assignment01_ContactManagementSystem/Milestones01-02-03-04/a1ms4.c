@@ -2,40 +2,22 @@
 
 #include <stdio.h>
 
-// This source file needs to "know about" the structures you declared
-// in the header file before referring to those new types:
-// HINT: put the header file name in double quotes so the compiler knows
-//       to look for it in the same directory/folder as this source file
-// #include your contacts header file on the next line:
 #include "contacts.h"
 
 int main(void)
 {
-    // Declare variables here:
-
-    // Create a variable of type Contact and call it something self-describing like "contact"
-    // - HINT: Be sure to initialize the values to 0 and empty C strings
-    // IMPORTANT:  Do NOT declare variables of type Name, Address, or Numbers
-
 	struct Contact contacts =  {{{0}}} ;
-		
 
-    // Display the title
 	printf("Contact Management System\n");
 	printf("=========================\n");
 
-    // Call the Contact function getName to store the values for the Name member
-	getName(&contacts.name);
+	getName(&contacts.name);                                                       //Call the Contact function getName to store the values for the Name member
 
-    // Call the Contact function getAddress to store the values for the Address member
-	getAddress(&contacts.address);
+	getAddress(&contacts.address);                                                 //Call the Contact function getAddress to store the values for the Address member
 
-    // Call the Contact function getNumbers to store the values for the Numbers member
-	getNumbers(&contacts.numbers);
+	getNumbers(&contacts.numbers);                                                 //Call the Contact function getNumbers to store the values for the Numbers member
 
-    // Display Contact summary details
-
-	printf("Contact Details\n");
+	printf("Contact Details\n");                                                   // Display Contact summary details
 	printf("===============\n");
 	printf("Name Details\n");
 	printf("------------\n");
@@ -58,7 +40,6 @@ int main(void)
 	printf("Business phone number: %s\n", contacts.numbers.business);
 	printf("\n");
 
-    // Display Completion Message
     printf("Structure test for Contact using functions done!\n");
     
     return 0;
