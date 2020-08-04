@@ -2,31 +2,31 @@
 
 // Put your code below:
 #include <stdio.h>
-#define NUMS 10  //define magic number
-int main(void) //start code
+#define NUMS 10  
+int main(void) 
 {
-	int days, j, highTemp[NUMS], lowTemp[NUMS], highDay, lowDay, day_avgTemp = 0; //variables
-	int highestT = 0, lowestT = 0; //variables set to 0 to store values
+	int days, j, highTemp[NUMS], lowTemp[NUMS], highDay, lowDay, day_avgTemp = 0;       //variables
+	int highestT = 0, lowestT = 0;                                                      //variables set to 0 to store values
 	double sumTemp = 0;
 
 	printf("---=== IPC Temperature Calculator V2.0 ===---\n");
-	printf("Please enter the number of days, between 3 and 10, inclusive: "); //asks user entry
-	scanf("%d", &days);  //accept user entry
+	printf("Please enter the number of days, between 3 and 10, inclusive: ");           //asks user entry
+	scanf("%d", &days);                                                                 //accept user entry
 	printf("\n");
 
-	while (days < 3 || days > NUMS) //while loop to set condition for number of days
+	while (days < 3 || days > NUMS)                                                    //while loop to set condition for number of days
 	{
 		printf("Invalid entry, please enter a number between 3 and 10, inclusive: ");
 		scanf("%d", &days);
 	}
 	printf("\n");
-	for (j = 0; j < days; j++) {  //for loop for parallel array
+	for (j = 0; j < days; j++) {                                                       //for loop for parallel array
 		printf("Day %d - High: ", j + 1);
 		scanf("%d", &highTemp[j]);
 
 		if (highTemp[j] > highestT) {
-			highestT = highTemp[j];  //calculating highest temp
-			highDay = j + 1;  // which day the highest temp occured
+			highestT = highTemp[j];                                           //calculating highest temp
+			highDay = j + 1;                                                  // which day the highest temp occured
 		}
 
 		printf("Day %d - Low: ", j + 1);
@@ -41,7 +41,7 @@ int main(void) //start code
 
 	printf("\nDay  Hi  Low\n");
 
-	for (j = 0; j < days; j++) {  //for loop to display parallel array
+	for (j = 0; j < days; j++) {                                                      //for loop to display parallel array
 		printf("%d    %d    %d\n", j + 1, highTemp[j], lowTemp[j]);
 	}
 
@@ -50,12 +50,13 @@ int main(void) //start code
 	printf("The lowest temperature was %d, on day %d\n", lowestT, lowDay);
 
 	printf("\n");
-	do {   //'do-while' loop to accept user entry and set conditions
-		printf("Enter a number between 1 and %d to see the average temperature for the entered number of days, enter a negative number to exit: ", days);
+	do {                                                                              //'do-while' loop to accept user entry and set conditions
+		printf("Enter a number between 1 and %d to see the average temperature for");
+		printf(" the entered number of days, enter a negative number to exit: ", days);
 		scanf("%d", &day_avgTemp);
 		printf("\n");
 
-		while (day_avgTemp == 0 || day_avgTemp > days) //condition for invalid entry
+		while (day_avgTemp == 0 || day_avgTemp > days)                            //condition for invalid entry
 		{
 			printf("Invalid entry, please enter a number between 1 and %d, inclusive: ", days);
 			scanf("%d", &day_avgTemp);
@@ -66,19 +67,19 @@ int main(void) //start code
 			for (j = 0; j <= day_avgTemp - 1; j++)
 			{
 	
-				sumTemp = sumTemp + highTemp[j] + lowTemp[j]; //calculating the sum
+				sumTemp = sumTemp + highTemp[j] + lowTemp[j];             //calculating the sum
 		
 			}
 			double avgTemp = (sumTemp / (day_avgTemp * 2)); //casting to double
 			printf("The average temperature up to day %d is: %.2f\n", day_avgTemp, avgTemp);
 			printf("\n");
-			sumTemp = 0;  //set sum to 0 for each loop
+			sumTemp = 0;                                                      //set sum to 0 for each loop
 		}
-	} while (day_avgTemp >= 0);  //condition for program to run; otherwise it prints the following and ends
+	} while (day_avgTemp >= 0);                                                       //condition for program to run; otherwise it prints the following and ends
 
 	printf("Goodbye!\n");
 
-	return 0; //ends code
+	return 0;                                                                         //ends code
 }
 
 /* OUTPUT
