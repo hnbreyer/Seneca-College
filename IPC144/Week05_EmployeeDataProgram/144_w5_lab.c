@@ -1,12 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
-// Define Number of Employees "SIZE" to be 2
+
 #define SIZE 2		
 
 #include <stdio.h>
 
-
-// Declare Struct Employee 
-struct Employee
+struct Employee                                                                        // Declare Struct Employee 
 {
 	int ID_no;
 	int age;
@@ -16,11 +14,8 @@ struct Employee
 /* main program */
 int main(void)
 {
-
-
-	// Declare a struct Employee array "emp" with SIZE elements 
-	// and initialize all elements to zero
-	struct Employee	emp[SIZE] = { {0} };
+	struct Employee	emp[SIZE] = { {0} };                                          // Declare a struct Employee array "emp" with SIZE elements 
+	                                                                              // and initialize all elements to zero
 	int i, valEmp = 0;
 	int option = 0;
 
@@ -28,40 +23,30 @@ int main(void)
 
 	do
 	{
-	//	option = 0;
-		// Print the option list
+		                                                                      // Print the option list
 		printf("1. Display Employee Information\n");
 		printf("2. Add Employee\n");
 		printf("0. Exit\n\n");
 		printf("Please select from the above options: ");
 
-		// Capture input to option variable
-		scanf("%d", &option);
+		scanf("%d", &option);                                                 // Capture input to option variable
 		printf("\n");
 
 		switch (option)
 		{
 
-		case 0:	// Exit the program
-			printf("Exiting Employee Data Program. Good Bye!!!\n");
+		case 0:	                                                           
+			printf("Exiting Employee Data Program. Good Bye!!!\n");       // Exit the program
 			break;
 
-		case 1: // Display Employee Data
-				// @IN-LAB
+		case 1:                                                               // Display Employee Data
 
 			printf("EMP ID  EMP AGE EMP SALARY\n");
 			printf("======  ======= ==========\n");
 
-			// Use "%6d%9d%11.2lf" formatting in a   
-			// printf statement to display
-			// employee id, age and salary of 
-			// all  employees using a loop construct 
 
-			// The loop construct will be run for SIZE times 
-			// and will only display Employee data 
-			// where the EmployeeID is > 0
-
-			for (i = 0; i < SIZE; i++) {
+			for (i = 0; i < SIZE; i++) {                                //Loop will be run for SIZE times; will only display Employee data 
+				                                                    // where the EmployeeID is > 0
 
 				if (emp[i].ID_no > 0)
 					printf("%6d%9d%11.2lf\n", emp[i].ID_no, emp[i].age, emp[i].sal);
@@ -69,8 +54,7 @@ int main(void)
 			printf("\n");
 			break;
 
-		case 2:	// Adding Employee
-				// @IN-LAB
+		case 2:	                                                          // Adding Employee
 
 			printf("Adding Employee\n");
 			printf("===============\n");
@@ -82,7 +66,7 @@ int main(void)
 				scanf("%d", &emp[valEmp].age);
 				printf("Enter Employee Salary: ");
 				scanf("%lf", &emp[valEmp].sal);
-				valEmp++; //increment the number of employees
+				valEmp++;                                          //increment the number of employees
 			
 				printf("\n");
 
