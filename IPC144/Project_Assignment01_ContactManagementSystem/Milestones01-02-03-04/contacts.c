@@ -2,27 +2,19 @@
 
 #include <stdio.h>
 
-// This source file needs to "know about" the structures you declared
-// in the header file before referring to those new types:
-// HINT: put the header file name in double quotes so the compiler knows
-//       to look for it in the same directory/folder as this source file
-// #include your contacts header file on the next line:
 #include "contacts.h"
 
-
-// Get and store from standard input the values for Name
-// Put your code here that defines the Contact getName function:
-void getName(struct Name *name) {
+void getName(struct Name *name) {                                                       // Get and store from standard input the values for Name
 	char choice = 0;
 	printf("Please enter the contact's first name: ");
 	scanf("%[^\n]", name->firstName);
 	printf("Do you want to enter a middle initial(s)? (y or n): ");
-	scanf(" %c", &choice); //space before the % sign; it makes sure
-		//the buffer is empty to receive data from user
+	scanf(" %c", &choice);                                                          //space before the % sign; it makes sure
+		                                                                        //the buffer is empty to receive data from user
 
-	if (choice == 'y' || choice == 'Y') { //selection code block, so user can chose to enter data or not
+	if (choice == 'y' || choice == 'Y') {                                           //selection code block, user can chose to enter data or not
 		printf("Please enter the contact's middle initial(s): ");
-		scanf(" %[^\n]", name->middleInitial); //scanf_s("%[^\n]"); it accepts strings with space between words, until a new line is encountered  
+		scanf(" %[^\n]", name->middleInitial);                                  //it accepts strings w/ space bet. words until new line  
 		
 	}
 	
@@ -31,15 +23,12 @@ void getName(struct Name *name) {
 
 }
 
-
-// Get and store from standard input the values for Address
-// Put your code here that defines the Contact getAddress function:
-void getAddress(struct Address* address) {
+void getAddress(struct Address* address) {                                             // Get and store from standard input the values for Address
 
 	char choice = 0;
 
 	printf("Please enter the contact's street number: ");
-	scanf("%u", &address->streetNumber); //%u specifier for unsigned int 
+	scanf("%u", &address->streetNumber);                                           //%u specifier for unsigned int 
 
 	printf("Please enter the contact's street name: ");
 	scanf(" %[^\n]", address->street);
@@ -61,9 +50,7 @@ void getAddress(struct Address* address) {
 }
 
 
-// Get and store from standard input the values for Numbers
-// Put your code here that defines the Contact getNumbers function:
-void getNumbers(struct Numbers* numbers) {
+void getNumbers(struct Numbers* numbers) {                                        // Get and store from standard input the values for Numbers
 
 	char choice = 0;
 
