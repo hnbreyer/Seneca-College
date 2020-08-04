@@ -1,34 +1,26 @@
-// Structure type Name declaration (Milestone 1)
-
-struct Name {
+struct Name {                                                        // Structure type Name declaration (Milestone 1)
     char firstName[31];
     char middleInitial[7];
     char lastName[36];
 };
-
-// Structure type Address declaration 
-// Place your code here... (from Milestone 1)
-struct Address
+                                                           
+struct Address                                                       // Structure type Address declaration
 {
-	unsigned int streetNumber; //only accepts positive values
+	unsigned int streetNumber;                                   //only accepts positive values
 	char street[41];
 	unsigned int apartmentNumber;
 	char postalCode[8];
 	char city[41];
 };
 
-// Structure type Numbers declaration
-// Place your code here... (from Milestone 1)
-struct Numbers
+struct Numbers                                                      // Structure type Numbers declaration
 {
 	char cell[11];
 	char home[11];
 	char business[11];
 };
 
-// Structure type Contact declaration
-// Place your code here... (from Milestone 3)
-struct Contact
+struct Contact                                                      // Structure type Contact declaration
 {
 	struct Name name;
 	struct Address address;
@@ -43,14 +35,11 @@ struct Contact
 // ====== Milestone 4 =======
 
 // Get and store from standard input the values for Name
-// Place your code here...
 void getName(struct Name *);
 
 
 // Get and store from standard input the values for Address
-// Place your code here...
 void getAddress(struct Address *);
 
 // Get and store from standard input the values for Numbers
-// Place your code here...
 void getNumbers(struct Numbers *);
