@@ -26,5 +26,10 @@ int main(void)
 
 
 	return 0;
-
 }
+
+/*OUTPUT
+Please enter the amount to be paid: $8.68
+Loonies required: 8, balance owing $0.68
+Quarters required: 2, balance owing $0.18
+*/
