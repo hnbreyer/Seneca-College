@@ -48,7 +48,6 @@ namespace sdds
             else {
                 cout << "Name: " << name << " ID: " << id << endl;
                 
-
                 if (cargo == nullptr) {
                     cout << "No cargo on this train." << endl;
                 }
@@ -60,18 +59,14 @@ namespace sdds
 
     void Train::loadCargo(Cargo carg) {
 
-   
         cargo = new Cargo;
 
         strcpy(cargo->description, carg.description);
         cargo->weight = carg.weight;
-
-        
     }
 
     void Train::unloadCargo() {
 
-        
         delete cargo;
         cargo = nullptr;
     }
