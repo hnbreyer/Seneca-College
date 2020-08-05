@@ -1,14 +1,6 @@
 //Ship.cpp
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 #define _CRT_SECURE_NO_WARNINGS
-
 
 #include <iostream>
 #include "Ship.h"
@@ -22,9 +14,8 @@ namespace sdds
     }
 
     Ship::Ship(const char* shipT, Engine* engines, int lengthEngine) {
-        setEmptyShip(); //initialzing values to emmpty state
+        setEmptyShip();                                                                            //initialzing values to empty state
         setShip(shipT, engines, lengthEngine);
-
     }
 
     void Ship::setEmptyShip() {
@@ -34,8 +25,7 @@ namespace sdds
         
         for (int i = 0; i < number_engines; i++) {
             engineArr[i].setEmptyEng();
-        }
-        
+        }        
     }
 
     void Ship::setShip(const char* type, Engine* engines, int lengthEngine) {
@@ -53,22 +43,18 @@ namespace sdds
             if (engineArr ==  nullptr){
 
                 if (number_engines > 0) {
-                    engineArr = new Engine[number_engines]; //allocating memory to engine array
+                    engineArr = new Engine[number_engines];                                        //allocating memory to engine array
                     for (int i = 0; i < lengthEngine; i++) {
 
                         engineArr[i] = engines[i];
-
-                    }
-                
+                    }               
                 }
-
             }
             else {
                 setEmptyShip();
             }
         }
     }
-
 
     bool Ship::empty() const {
         bool isEmpty = false;
@@ -84,10 +70,8 @@ namespace sdds
         for (int i = 0; i < number_engines; i++) {
             total += engineArr[i].get() * 5;
         }
-
         return total;
     }
-
 
     void Ship::display() const {
 
@@ -95,29 +79,19 @@ namespace sdds
         cout.precision(2);
 
         if (!empty() && engineArr != nullptr && shipType[0] != '\0') {
-
             if (number_engines < 4) {
-
                 cout << shipType << "- " << calculatePower() << endl;
             }
             else {
                 cout << shipType << "-" << calculatePower() << endl;
-
             }
             for (int i = 0; i < number_engines; i++) {
-
                 engineArr[i].display();
-
-
             }
-
         }
         else {
-
             cout << "No available data" << endl;
-
         }
-
     }
 
 
@@ -139,20 +113,17 @@ namespace sdds
                 for (int i = 0; i < number_engines; i++) {
                     engineArr[i] = engineTemp[i];
                 }
-
                 delete[] engineTemp;
                 engineTemp = nullptr;
 
                 engineArr[number_engines] = e;
-                number_engines++;
-                
+                number_engines++;             
             }
         }
         else {
             cout << "The ship doesn't have a type! Engine cannot be added!" << endl;
         }
         return *this;
-
     }
 
     bool operator==(const Ship& ship, const Ship& other_ship) {
@@ -180,8 +151,4 @@ namespace sdds
         delete[] engineArr;
        engineArr = nullptr;
     }
-
-
-
-
 }
