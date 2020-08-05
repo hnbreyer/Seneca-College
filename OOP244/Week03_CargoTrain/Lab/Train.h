@@ -1,12 +1,5 @@
 // Train.h
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 #ifndef SDDS_TRAIN_H
 #define SDDS_TRAIN_H
 
