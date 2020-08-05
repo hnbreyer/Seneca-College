@@ -3,14 +3,12 @@
 // Version: 1.1
 // Date: 02/28/2020
 // Author: Nargis Khan
-// Description:
-// This file tests lab section of your workshop
 /////////////////////////////////////////////
 
 #include<iostream>
 #include<cstring>
 #include"Basket.h"
-#include"Basket.h" //intentional
+#include"Basket.h"
 
 using namespace std;
 using namespace sdds;
@@ -24,9 +22,8 @@ int main(){
 	
 
 
-	//checking input validity  3 argument constructor
 	cout << "---------------------------------------------" << endl;
-	cout << "**** Checking Input Validity (invalid) ****" << endl;
+	cout << "**** Checking Input Validity (invalid) ****" << endl;                            //checking input validity  3 argument constructor
 
 	Basket b1[] = { { "cherry", -2, 2.50 },
 	{ "orange", 3, -5.50 },
@@ -52,8 +49,7 @@ int main(){
 	cout << "---------------------------------------------" << endl;
 
 
-	//copy constructor
-	cout << "**** Validating copy constructor ****" << endl;
+	cout << "**** Validating copy constructor ****" << endl;                             //copy constructor
 	Basket b5 = b3;
 	cout << "A new basket of banana is created" << endl;
 	cout << b5;
@@ -61,8 +57,7 @@ int main(){
 	cout << b3;
 	cout << "---------------------------------------------" << endl;
 	
-	//copy assignment operator
-	cout << "**** Checking copy assignment operator ****" << endl;
+	cout << "**** Checking copy assignment operator ****" << endl;                       //copy assignment operator
 	b2 = b4; 
 	cout << b2;
 	cout << "---------------------------------------------" << endl;
@@ -70,24 +65,21 @@ int main(){
 	cout << "---------------------------------------------" << endl;
 	
 
-	//checking identical 
-    cout << "**** Basket comparing original and copy ****" << endl;
+    cout << "**** Basket comparing original and copy ****" << endl;                          //checking identical 
 	if (b2 == b4) cout << "Both baskets are carrying the same fruits" << endl;
 	else
 		cout << "They are not same type of Baskets" << endl;
 	cout << "---------------------------------------------" << endl;
 
 	
-	//Increasing the price of original
-	cout << "Basket increasing the price of original" << endl;
+	cout << "Basket increasing the price of original" << endl;                           //Increasing the price of original
 	b4.addPrice(1.0);
 	cout << b4;
 	cout << "------------------------------------------------------------------" << endl;
 	
 
 	
-	//After increasing price checking the identical again
-	cout << "**** Basket comparing after increasing the price and quantity ****" << endl;
+	cout << "**** Basket comparing after increasing the price and quantity ****" << endl; //After increasing price checking the identical again
 
 	if (b2 != b4) cout << "Baskets are not same" << endl;
 	
