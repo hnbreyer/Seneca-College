@@ -1,19 +1,9 @@
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 /***********************************************************************
 // OOP244 Workshop 3: Classes & Privacy
 // File TrainTester.cpp
 // Version 1.0
 // Date	2020/01/19
 // Author Michael Huang
-// Description
-// Tests Train module
-//
 // Revision History
 // -----------------------------------------------------------
 // Name            Date            Reason
@@ -23,7 +13,7 @@
 
 #include <iostream>
 #include "Train.h"
-#include "Train.h" // intentional
+#include "Train.h"                                                                                      // intentional
 using namespace std;
 using namespace sdds;
 
@@ -95,3 +85,55 @@ int main() {
 
   return 0;
 }
+
+/*OUTPUT
+
+Create a Train and attempt to set it (empty state)
+----------------------------------------------------------------
+1 - 1 - 1 - 1 - 1 - 1 - 1 - 1 - 1 - 1
+Success! Each Train is in empty state
+Display an empty Train----------------------------------------------------------------
+2 - 2 - 2 - 2 - 2 - 2 - 2 - 2 - 2 - 2
+***Train Summary***
+This is an empty train.
+Set each Train to a non empty state
+----------------------------------------------------------------
+3 - 3 - 3 - 3 - 3 - 3 - 3 - 3 - 3 - 3
+Success! Each Train is in non empty state
+Display each non empty Train
+----------------------------------------------------------------
+4 - 4 - 4 - 4 - 4 - 4 - 4 - 4 - 4 - 4
+***Train Summary***
+Name: Birthday Train ID: 1
+No cargo on this train.
+***Train Summary***
+Name: Choo Choo Train ID: 2
+No cargo on this train.
+***Train Summary***
+Name: Hype Train ID: 3
+No cargo on this train.
+Load Cargo onto a Train and Display
+----------------------------------------------------------------
+5 - 5 - 5 - 5 - 5 - 5 - 5 - 5 - 5 - 5
+***Train Summary***
+Name: Birthday Train ID: 1
+Cargo: Boxes Weight: 55.55
+***Train Summary***
+Name: Choo Choo Train ID: 2
+Cargo: Flowers Weight: 66.666
+***Train Summary***
+Name: Hype Train ID: 3
+Cargo: Ore Weight: 77.7777
+Unload Cargo from each Train and Display
+----------------------------------------------------------------
+6 - 6 - 6 - 6 - 6 - 6 - 6 - 6 - 6 - 6
+***Train Summary***
+Name: Birthday Train ID: 1
+No cargo on this train.
+***Train Summary***
+Name: Choo Choo Train ID: 2
+No cargo on this train.
+***Train Summary***
+Name: Hype Train ID: 3
+No cargo on this train.
+*/
