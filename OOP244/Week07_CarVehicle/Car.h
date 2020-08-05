@@ -1,12 +1,5 @@
 //Car.h
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 #ifndef SDDS_CAR_H
 #define SDDS_CAR_H
 
@@ -30,14 +23,10 @@ namespace sdds
         void finetune();
         std::ostream& display(std::ostream& os) const;
         std::istream& input(std::istream& in);
-
-
-
     };
     std::ostream& operator<<(std::ostream& os, const Car& C);
    
     std::istream& operator>>(std::istream& in, Car& C);
 }
-
 
 #endif
