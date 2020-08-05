@@ -1,14 +1,6 @@
 //Saiyan.cpp
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 #define _CRT_SECURE_NO_WARNINGS
-
 
 #include <iostream>
 #include "Saiyan.h"
@@ -17,17 +9,12 @@ using namespace std;
 namespace sdds
 {
     Saiyan::Saiyan() {
-        setEmpty();
-        
+        setEmpty();     
     }
 
-
     Saiyan::Saiyan(const char* nam, int date, int pow) {
-
         setEmpty();
         set(nam, date, pow);
-
-
     }
 
     bool Saiyan::isSuper() const {
@@ -35,20 +22,15 @@ namespace sdds
     }
 
     bool Saiyan::isValid() const {
-
         bool valid = false;
-
-
+        
         if (m_name != nullptr && m_name[0] != '\0' && m_dob < 2020 && m_power > 0) {
-
             valid = true;
         }
-
         return valid;
     }
 
     void Saiyan::setEmpty() {
-
         m_name = nullptr;
         m_dob = 0;
         m_power = 0;
@@ -68,20 +50,17 @@ namespace sdds
             if (isSuper()) {
                 cout << "Super Saiyan level is: " << m_level << endl;
             }
-            if (m_level <= 0) { //avoiding double spacing in output
+            if (m_level <= 0) {                                                                   //avoiding double spacing in output
 
                 
                 cout << endl;
             }
-
         }
     }
 
     void Saiyan::set(const char* name, int dob, int power, int level, bool super) {
 
-
         if (name != nullptr && name[0] != '\0' && dob < 2020 && power > 0) {
-
             if (m_name == nullptr) {
                 int size = 0;
                 size = strlen(name);
@@ -101,7 +80,6 @@ namespace sdds
         }
     }
 
-
     bool Saiyan::hasLost(Saiyan& other) {
         bool result = false;
         this->powerup();
@@ -111,26 +89,19 @@ namespace sdds
             result = false;
         }
 
-        if (this->m_power < other.m_power) {
-            
+        if (this->m_power < other.m_power) {           
             result = true;
-        }
-
-          
+        }          
         return result;
     }
 
     void Saiyan::powerup() {
-        
             if (this->isSuper()) {
-
             this->m_power = this->m_power * (this->m_level + 1);
-            }
-        
+            }      
     }
 
     Saiyan::~Saiyan() {
-
         delete[] m_name;
         m_name = nullptr;
     }
