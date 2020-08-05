@@ -3,12 +3,6 @@
 // Version: 1.0
 // Date: 02/28/2020
 // Author: Nargis Khan
-// Description:
-// This file tests lab section of your workshop
-/////////////////////////////////////////////
-// -----------------------------------------------------------
-// Name            Date            Reason
-// Nargis Khan
 /////////////////////////////////////////////////////////////////
 
 #include<iostream>
@@ -60,7 +54,8 @@ int main() {
 
    return 0;
 }
-/* Execution sample:
+
+/* OUTPUT
 ---------------------------------------------
 *** Checking Car default constructor ***
 Car is not initiated yet
