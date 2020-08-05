@@ -12,9 +12,6 @@
 |    ==     ==          ==    ==     ==      == ==
 |   ==     ======  =====     ==     ======  ==   ==
 |                                                         
-|  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-|  !!!   DO NOT ALTER THE CONTENTS OF THIS FILE   !!!
-|  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 +--------------------------------------------------------*/
 
 #define _CRT_SECURE_NO_WARNINGS
@@ -34,7 +31,6 @@ int main(void)
     return 0;
 }
 
-// Display specified test section header
 void printSectionHeader(const char *testName)
 {
     printf("\n");
