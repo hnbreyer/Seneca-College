@@ -3,20 +3,9 @@
 #include <stdio.h>
 #include <string.h>
 
-
-// +-------------------------------------------------+
-// | NOTE:  Include additional header files...       |
-// +-------------------------------------------------+
 #include "contacts.h"
 #include "contactHelpers.h"
 
-
-// +-------------------------------------------------+
-// | NOTE:  Copy/Paste your Assignment-2 Milestone-3 |
-// |        source code below...                     |
-// +-------------------------------------------------+
-
-// getName:
 void getName(struct Name* name) {
 	char choice = 0;
 
@@ -40,7 +29,6 @@ void getName(struct Name* name) {
 	scanf(" %[^\n]", name->lastName);
 }
 
-// getAddress:
 void getAddress(struct Address* address) {
 
 	char choice = 0;
@@ -48,7 +36,7 @@ void getAddress(struct Address* address) {
 	printf("Please enter the contact's street number: ");
 	address->streetNumber = getInt();
 
-	while (address->streetNumber < 0) { //added to accept only positive values
+	while (address->streetNumber < 0) {                                                  //added to accept only positive values
 		printf("*** INVALID STREET NUMBER *** <must be a positive number>: ");
 		address->streetNumber = getInt();
 	}
@@ -82,7 +70,6 @@ void getAddress(struct Address* address) {
 }
 	
 
-// getNumbers:
 	void getNumbers(struct Numbers* numbers) {
 
 		char choice = 0;
@@ -114,7 +101,6 @@ void getAddress(struct Address* address) {
 		
 	}
 
-// getContact:
 	void getContact(struct Contact* contacts) {
 
 		getName(&(*contacts).name);
