@@ -2,19 +2,11 @@
 
 #include <stdio.h>
 
-// This source file needs to "know about" the SYSTEM string library functions.
-// HINT: The library name is string.h.
-//       #include the string.h header file on the next line:
 #include <string.h>
-#include <ctype.h> //included for the isdigit function
+#include <ctype.h>                                                                      //included for the isdigit function
 
-// -------------------------------
-// Include your contactHelpers header file on the next line:
 #include "contactHelpers.h"
 
-
-// -------------------------------
-// define MAXCONTACTS for sizing contacts array (5):
 #define MAXCONTACTS 5
 
 
@@ -22,25 +14,17 @@
 // Function Definitions
 //--------------------------------
 
-// +-------------------------------------------------+
-// | NOTE:  Copy/Paste your Assignment-2 Milestone-3 |
-// |        function definitions below...            |
-// +-------------------------------------------------+
-
-// clearKeyboard
 void clearKeyboard(void)
 {
-	while (getchar() != '\n'); // empty execution code block on purpose
+	while (getchar() != '\n');                                                      // empty execution code block on purpose
 }
 
-// pause:
 void pause(void)
 {
 	printf("(Press Enter to Continue)");
-	clearKeyboard(); // returns the control to caller when user presses Enter ('\n')
+	clearKeyboard();                                                                // returns the control to caller when user presses Enter ('\n')
 }
 
-// getInt:
 int getInt(void)
 {
 	char nl = 'x';
@@ -56,10 +40,9 @@ int getInt(void)
 	return value;
 }
 
-// getIntInRange:
 int getIntInRange(int min, int max)
 {
-	int validInt = getInt(); //assign the function to the variable, so the value entered will be stored there
+	int validInt = getInt();                                                      //assign the function to the variable, so the value entered will be stored there
 	while (validInt < min || validInt > max)
 	{
 		printf("*** OUT OF RANGE *** <Enter a number between %d and %d>: ", min, max);
@@ -68,7 +51,6 @@ int getIntInRange(int min, int max)
 	return validInt;
 }
 
-// yes:
 int yes(void)
 {
 
@@ -95,7 +77,6 @@ int yes(void)
 	return y;
 }
 
-// menu:
 int menu(void)
 {
 	int option;
@@ -112,13 +93,12 @@ int menu(void)
 	printf("\n");
 	printf("Select an option:> ");
 
-	option = getIntInRange(0, 6); //assigning values to the function
+	option = getIntInRange(0, 6);                                                       //assigning values to the function
 
 	return option;
 	printf("\n");
 }
 
-// contactManagerSystem:
 void contactManagerSystem(void)
 {
 	int option;
@@ -199,14 +179,6 @@ void contactManagerSystem(void)
 }
 
 
-
-
-// +-------------------------------------------------+
-// | NOTE:  Copy/Paste your Assignment-2 Milestone-3 |
-// |        empty function definitions below...      |
-// +-------------------------------------------------+
-
-// getTenDigitPhone:
 void getTenDigitPhone(char phoneNum[])
 {
 	int needInput = 1;
@@ -215,10 +187,9 @@ void getTenDigitPhone(char phoneNum[])
 		scanf("%10s", phoneNum);
 		clearKeyboard();
 
-		//modification to validate only numeric character digits
 		int i;
 		int digitcheck = 0;
-		for (i = 0; phoneNum[i] != '\0'; i++)
+		for (i = 0; phoneNum[i] != '\0'; i++)                                      //modification to validate only numeric character digits
 		{
 			if (isdigit(phoneNum[i]) !=0)
 			{
@@ -229,8 +200,7 @@ void getTenDigitPhone(char phoneNum[])
 			}
 		}
 
-		// (String Length Function: validate entry of 10 characters)
-		if (strlen(phoneNum) == 10 && digitcheck > 9)
+		if (strlen(phoneNum) == 10 && digitcheck > 9)                             // (String Length Function: validate entry of 10 characters)
 
 			needInput = 0;
 
@@ -240,7 +210,6 @@ void getTenDigitPhone(char phoneNum[])
 	}
 }
 
-// findContactIndex:
 int findContactIndex(const struct Contact contacts[], int size, const char cellNum[])
 {
 	int i;
@@ -252,7 +221,6 @@ int findContactIndex(const struct Contact contacts[], int size, const char cellN
 	return -1;
 }
 
-// displayContactHeader
 void displayContactHeader(void)
 {
 	printf("\n");
@@ -262,19 +230,17 @@ void displayContactHeader(void)
 
 }
 
-// displayContactFooter
 void displayContactFooter(int count)
 {
 	printf("+-----------------------------------------------------------------------------+\n");
 	printf("Total contacts: %d\n\n",count);
 }
 
-// displayContact:
 void displayContact(const struct Contact* contact)
 {
 	//full name
-	printf(" %s ", contact->name.firstName); //spaces before and after format as per instructions
-	if (strlen(contact->name.middleInitial) != 0)//checking if middle name was entered by checking its length 
+	printf(" %s ", contact->name.firstName);                                            //spaces before and after format as per instructions
+	if (strlen(contact->name.middleInitial) != 0)                                       //checking if middle name was entered by checking its length 
 		printf("%s ", contact->name.middleInitial);
 	printf("%s\n", contact->name.lastName);
 	//numbers
@@ -286,7 +252,6 @@ void displayContact(const struct Contact* contact)
 	printf("%s, %s\n", contact->address.city, contact->address.postalCode);
 }
 
-// displayContacts:
 void displayContacts(const struct Contact contacts[], int size)
 {
 	displayContactHeader();
@@ -304,7 +269,6 @@ void displayContacts(const struct Contact contacts[], int size)
 	displayContactFooter(count);
 }
 
-// searchContacts:
 void searchContacts(const struct Contact contacts[], int size)
 {
 	int contactFound;
@@ -325,7 +289,6 @@ void searchContacts(const struct Contact contacts[], int size)
 	printf("\n");
 }
 
-// addContact:
 void addContact(struct Contact contacts[], int size)
 {
 	printf("\n");
@@ -349,7 +312,6 @@ void addContact(struct Contact contacts[], int size)
 	}
 }
 
-// updateContact:
 void updateContact(struct Contact contacts[], int size)
 {
 	printf("\n");
@@ -397,7 +359,6 @@ void updateContact(struct Contact contacts[], int size)
 	}
 }
 
-// deleteContact:
 void deleteContact(struct Contact contacts[], int size)
 {
 	printf("\n");
@@ -431,13 +392,11 @@ void deleteContact(struct Contact contacts[], int size)
 	}
 }
 
-// sortContacts:
-void sortContacts(struct Contact contacts[], int size)
+void sortContacts(struct Contact contacts[], int size)                                      //bubble sort
 {
 	struct Contact temp;
 	int j, i;
 
-	///////
 	for (i = 0; i < size - 1; i++)
 	{
 		for (j = i + 1; j < size; j++)
@@ -452,19 +411,6 @@ void sortContacts(struct Contact contacts[], int size)
 		}
 	}
 
-	//////
-
-	//I used the bubble sort:
-	/*for (i = size - 1; i > 0; i--) {
-		for (j = 0; j < size; j++) {
-				if (strcmp(contacts[j].numbers.cell, contacts[j + 1].numbers.cell) > 0)
-				{
-					temp = contacts[j];
-					contacts[j] = contacts[j + 1];
-					contacts[j + 1] = temp;
-				}
-			}
-	}*/
 	printf("\n--- Contacts sorted! ---\n");
 	printf("\n");
 }
