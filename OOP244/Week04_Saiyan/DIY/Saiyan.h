@@ -1,12 +1,4 @@
-#pragma once
 //Saiyan.h
-
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
 
 #ifndef SDDS_SAIYAN_H
 #define SDDS_SAIYAN_H
@@ -30,7 +22,7 @@ namespace sdds
         //constructors
         Saiyan();
         Saiyan(const char* nam, int date, int pow);
-        //
+
         bool isSuper() const;
         bool isValid() const;
         void setEmpty();
@@ -42,9 +34,6 @@ namespace sdds
         //destructor
         ~Saiyan();
     };
-
-
 }
-
 
 #endif
