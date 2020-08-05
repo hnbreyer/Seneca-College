@@ -3,11 +3,7 @@
 // Version: 1.0
 // Date: 2/2/2020
 // Author: Elnaz Delpisheh
-// Description:
-// This file tests lab section of your workshp
 /////////////////////////////////////////////
-
-
 
 #include <iostream>
 #include "Ship.h"
@@ -45,8 +41,7 @@ int main()
     
     cout << endl<< endl;
     
-    //Adding an engine to the ship
-    cout << "Adding an engine to Titanic" << endl;
+    cout << "Adding an engine to Titanic" << endl;                                                //Adding an engine to the ship
 
     Engine engine = Engine("V10",3.0);
     titanic += engine;
@@ -68,9 +63,8 @@ int main()
     aurora.display();
     
     cout << endl<< endl;
-
-	//Comparing with the standards:
-    cout<<"Comparing Titanic with the standards:"<<endl;
+	
+    cout<<"Comparing Titanic with the standards:"<<endl;                                        //Comparing with the standards
 	if(titanic<MIN)
 		cout<<"Below average!"<<endl;
 	else
@@ -88,7 +82,7 @@ int main()
 	
 }
 
-/*
+/* OUTPUT
  Testing Ship objects
  liner- 91.00
  6.00 liters - V8
