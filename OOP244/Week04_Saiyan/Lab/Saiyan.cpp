@@ -1,14 +1,6 @@
 //Saiyan.cpp
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 #define _CRT_SECURE_NO_WARNINGS
-
 
 #include <iostream>
 #include "Saiyan.h"
@@ -22,7 +14,6 @@ namespace sdds
 
     Saiyan::Saiyan(const char* nam, int date, int pow) {
         set(nam, date, pow);
-      // this->m_super = false;
         
     }
 
@@ -33,13 +24,9 @@ namespace sdds
     bool Saiyan::isValid() const {
         
         bool valid = false;
-
-        
         if (m_name != nullptr && m_name[0] != '\0' && m_dob > 0 && m_dob < 2020 && m_power > 0) {
-
              valid = true;
-        }
-        
+        }   
         return valid;
     }
 
@@ -65,9 +52,7 @@ namespace sdds
 
     void Saiyan::set(const char* name, int dob, int power, bool super) {
         if(!name || strlen(name) == 0 || dob > 2020 || power < 0) {
-        //if ( name != nullptr && name[0] != '\0' && dob < 2020 && power > 0) {
-            setEmpty();
-          
+            setEmpty();          
         }
         else {
             strcpy(m_name, name);
@@ -80,12 +65,10 @@ namespace sdds
 
     bool Saiyan::hasLost(const Saiyan& other) const {
         bool result = false;
-               
 
                 if (!this->isValid() || !other.isValid()) {
                     result = false;
                 }
-
 
                 if (this->m_power < other.m_power) {
                     result = true;
@@ -93,6 +76,4 @@ namespace sdds
 
                 return result;
             }
-
-
         }
