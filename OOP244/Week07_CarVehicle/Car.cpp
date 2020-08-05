@@ -1,15 +1,6 @@
 //Car.cpp
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 #define _CRT_SECURE_NO_WARNINGS
-
-
 
 #include "Car.h"
 
@@ -35,7 +26,6 @@ namespace sdds
         if (m_regYear >= MIN_YEAR) {
             Vehicle::finetune();
             std::cout << "This car is finely tuned to default speed" << std::endl;
-
         }
         else {
             std::cout << "Car cannot be tuned and has to be scraped" << std::endl;
@@ -72,8 +62,7 @@ namespace sdds
         return in;
     }
 
-    //operator overload helpers
-    std::ostream& operator<<(std::ostream& os, const Car& C) {
+    std::ostream& operator<<(std::ostream& os, const Car& C) {                              //operator overload helpers
         C.display(os);
         return os;
     }
