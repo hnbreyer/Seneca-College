@@ -1,12 +1,5 @@
 // Gift.cpp
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstring>
@@ -31,7 +24,6 @@ namespace sdds
 			cout << "Enter gift price: ";
 			cin >> price;
 		}
-
 	}
 
 	void gifting(int& units) {
@@ -43,10 +35,9 @@ namespace sdds
 			cout << "Enter gift units: ";
 			cin >> units;
 		}
-
 	}
 
-	void gifting(Gift& gift) { //new gifting function
+	void gifting(Gift& gift) {                                                                        //new gifting function
 		cout << "Preparing a gift..." << endl;
 		gifting(gift.g_description);
 		gifting(gift.g_price);
@@ -65,8 +56,7 @@ namespace sdds
 			cout << "Wrap layers: " << gifts.wrap_layers << endl;
 			for (int i = 0; i < gifts.wrap_layers; i++) {
 				cout << "Wrap #" << i + 1 << ": " << gifts.wrap[i].pattern << endl;
-			}
-			
+			}	
 		}
 		else {
 
@@ -75,8 +65,7 @@ namespace sdds
 			cout << "Price: " << gifts.g_price << endl;
 			cout << "Units: " << gifts.g_units << endl;
 			cout << "Unwrapped" << endl;
-		}
-		
+		}	
 	}
 
 	bool wrap(Gift& gifts) {
@@ -92,24 +81,19 @@ namespace sdds
 				}
 			} while (gifts.wrap_layers < 1);
 
-			
 			gifts.wrap = new Wrapping[gifts.wrap_layers];
 			gifts.wrap->pattern = new char[MAX_PAT];
 			
-
 			for (int i = 0; i < gifts.wrap_layers; i++) {
 				
-
 				cout << "Enter wrapping pattern #" << i + 1 << ": ";
 				cin >> gifts.wrap->pattern;
 				
-
 				success = true;
 			}
 		}
 		else {
-			cout << "Gift is already wrapped!" << endl;
-			
+			cout << "Gift is already wrapped!" << endl;	
 		}
 
 		return success;
@@ -125,8 +109,6 @@ namespace sdds
 			delete[] gifts.wrap;
 			gifts.wrap = nullptr;
 			gifts.wrap_layers = 0;
-		
-
 		}
 		else {
 			cout << "Gift isn't wrapped! Can't unwrap." << endl;
@@ -135,7 +117,4 @@ namespace sdds
 		return success;
 	}
 	
-	
 }
-
-
