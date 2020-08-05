@@ -1,14 +1,6 @@
 //Ship.cpp
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 #define _CRT_SECURE_NO_WARNINGS
-
 
 #include <iostream>
 #include "Ship.h"
@@ -24,9 +16,8 @@ namespace sdds
     Ship::Ship(const char* shipT, Engine* engines, int lengthEngine) {
 
         setShip(shipT, engines, lengthEngine);
-
     }
-
+    
     void Ship::setEmptyShip(){
         shipType[0] = '\0';
         distance = 0;
@@ -42,14 +33,12 @@ namespace sdds
             number_engines = lengthEngine;
 
             for (int i = 0; i < lengthEngine; i++) {
-                engineArr[i] = engines[i];
-               
+                engineArr[i] = engines[i];             
             }
         }
         else {
             setEmptyShip();
         }
-
     }
 
     bool Ship::empty() const {
@@ -65,8 +54,7 @@ namespace sdds
         float total = 0;
         for (int i = 0; i < number_engines; i++) {
             total += engineArr[i].get() * 5;
-        }
-  
+        }  
         return total;
     }
 
@@ -77,35 +65,22 @@ namespace sdds
         cout.precision(2);
 
         if (!empty() && shipType[0] != '\0') {
-
             if (number_engines < 4) {
                 
             cout << shipType << "- " << calculatePower() << endl;
             }
             else {
                 cout << shipType << "-" << calculatePower() << endl;
-
             }
             for (int i = 0; i < number_engines; i++) {
-
-                engineArr[i].display();
-
-             
+                engineArr[i].display();          
             }
-
             }else {
-
             cout << "No available data" << endl;
-
         }
-
         }
    
-
-    
-
     Ship& Ship::operator+=(Engine e) {
-
 
         if (shipType != nullptr && strlen(shipType) > 0 && number_engines < MAX_ENGINE) {
             engineArr[number_engines++] = e;
@@ -113,7 +88,6 @@ namespace sdds
         else {
             cout << "The ship doesn't have a type! Engine cannot be added!" << endl;
         }
-
         number_engines++;
 
         return *this;
@@ -134,11 +108,5 @@ namespace sdds
             isLow = true;
         }
         return isLow;
-
     }
-   
-
-
-
 }
-
