@@ -1,19 +1,9 @@
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 /***********************************************************************
 // OOP244 Workshop 3: Classes & Privacy
 // File TrainTester2.cpp
 // Version 1.0
 // Date	2020/01/19
 // Author Michael Huang
-// Description
-// Tests updated Train module
-//
 // Revision History
 // -----------------------------------------------------------
 // Name            Date            Reason
@@ -23,7 +13,7 @@
 
 #include <iostream>
 #include "Train.h"
-#include "Train.h" // intentional
+#include "Train.h"                                                                                  // intentional
 using namespace std;
 using namespace sdds;
 
@@ -92,3 +82,52 @@ int main() {
 
   return 0;
 }
+
+/* OUTPUT
+
+Set each Train to a non empty state, load cargo and display
+----------------------------------------------------------------
+1 - 1 - 1 - 1 - 1 - 1 - 1 - 1 - 1 - 1
+***Train Summary***
+Name: Birthday Train ID: 1
+Cargo: Boxes Weight: 40.44
+***Train Summary***
+Name: Choo Choo Train ID: 2
+No cargo on this train.
+Increase cargo weight in a train and display
+----------------------------------------------------------------
+2 - 2 - 2 - 2 - 2 - 2 - 2 - 2 - 2 - 2
+t1 cargo was correctly increased
+t1 cargo was correctly increased to MAX_WEIGHT
+t1 cargo was correctly not increased
+***Train Summary***
+Name: Birthday Train ID: 1
+Cargo: Boxes Weight: 700.55
+Decrease cargo weight in a train with no cargo and display
+----------------------------------------------------------------
+3 - 3 - 3 - 3 - 3 - 3 - 3 - 3 - 3 - 3
+t2 doesn't have cargo was correctly not touched
+t2 after loading cargo was correctly not decreased below MIN_WEIGHT
+t2 decreased weight correctly
+***Train Summary***
+Name: Choo Choo Train ID: 2
+Cargo: Flowers Weight: 80.44
+Swap cargo between train t1 and t2
+----------------------------------------------------------------
+4 - 4 - 4 - 4 - 4 - 4 - 4 - 4 - 4 - 4***Train Summary***
+Name: Birthday Train ID: 1
+Cargo: Flowers Weight: 80.44
+***Train Summary***
+Name: Choo Choo Train ID: 2
+Cargo: Boxes Weight: 700.55
+Unload Cargo from each Train and attempt to swap
+----------------------------------------------------------------
+5 - 5 - 5 - 5 - 5 - 5 - 5 - 5 - 5 - 5
+correctly did not attempt to swap train without cargo
+***Train Summary***
+Name: Birthday Train ID: 1
+No cargo on this train.
+***Train Summary***
+Name: Choo Choo Train ID: 2
+No cargo on this train.
+*/
