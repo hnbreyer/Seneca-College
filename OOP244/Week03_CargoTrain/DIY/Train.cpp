@@ -1,18 +1,9 @@
 //Train.cpp
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 #define _CRT_SECURE_NO_WARNINGS
-
 
 #include <iostream>
 #include "Train.h"
-
 
 using namespace std;
 
@@ -58,7 +49,6 @@ namespace sdds
         else {
             cout << "Name: " << name << " ID: " << id << endl;
 
-
             if (cargo == nullptr) {
                 cout << "No cargo on this train." << endl;
             }
@@ -68,7 +58,6 @@ namespace sdds
                 cout << "Cargo: " << cargo->getDescript() << " Weight: " << cargo->getWeight() << endl;
             }
         }
-
     }
 
     void Train::loadCargo(Cargo carg) {
@@ -85,7 +74,6 @@ namespace sdds
         cargo = nullptr;
     }
 
-
     bool Train::swapCargo(Train& train) {
         bool success = false;
         Cargo* tempCargo;
@@ -100,13 +88,12 @@ namespace sdds
         return success;
     }
 
-    //constructor
-    Cargo::Cargo() {
+    Cargo::Cargo() {                                                                    //constructor
         description[0] = '\0';
         weight = 0.0; 
     } 
-    //constructor
-    Cargo::Cargo(const char* dsc, double wgh) {
+    
+    Cargo::Cargo(const char* dsc, double wgh) {                                         //constructor
         setDescript(dsc);
         setWeight(wgh);
     }
@@ -130,7 +117,6 @@ namespace sdds
         return *this;
     }
 
-
     char* Cargo::getDescript() {
         return description;
     }
@@ -138,10 +124,8 @@ namespace sdds
     Cargo& Cargo::setDescript(const char* desc) {
 
         if (desc[0] != '\0') {
-            strcpy(description, desc);
-            
-        }
-        
+            strcpy(description, desc);    
+        }    
             return *this;
     }
 
@@ -152,16 +136,13 @@ namespace sdds
         }
 
         if ((weit <= MIN_WEIGHT) && (weit >= MIN_WEIGHT)) {
-            setWeight(weit);
-            
+            setWeight(weit);      
         }
         else {
             weit = MIN_WEIGHT;
         }
-
     }
   
-
     bool Train::increaseCargo(double inc) {
         bool increase = false;
         double incCargo;
@@ -183,7 +164,6 @@ namespace sdds
         else {
             increase = false;
         }
-
         return increase;
     }
 
@@ -212,5 +192,3 @@ namespace sdds
         return decrease;
     }
     }
-
-    
