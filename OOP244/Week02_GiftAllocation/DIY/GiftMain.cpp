@@ -4,10 +4,6 @@
 // Version 1.0
 // Date	2020/01/05
 // Author Michael Huang
-// Description
-// Tests Gift module and provides a set of TODOs to complete
-// which the main focuses are dynamic memory allocation
-//
 // Revision History
 // -----------------------------------------------------------
 // Name            Date            Reason
@@ -17,7 +13,7 @@
 
 #include <iostream>
 #include "Gift.h"
-#include "Gift.h" // intentional
+#include "Gift.h"                                                                              // intentional
 using namespace std;
 using namespace sdds;
 
@@ -40,7 +36,7 @@ ostream& number(int num) {
 
 int main() {
 
-    Gift g1, g2; // Unwrapped Gifts
+    Gift g1, g2;                                                                               // Unwrapped Gifts
 
     cout << "Preparing an empty Gift to be wrapped and display it" << endl;
     line(64, '-') << endl; number(1) << endl;
@@ -73,6 +69,66 @@ int main() {
     display(g2);
 
     cout << "\nEnd of main" << endl;
-    unwrap(g2); // Unwrap in the end
+    unwrap(g2);                                                                                // Unwrap in the end
     return 0;
 }
+
+
+/*OUTPUT
+Preparing an empty Gift to be wrapped and display it
+----------------------------------------------------------------
+1 - 1 - 1 - 1 - 1 - 1 - 1 - 1 - 1 - 1
+Enter gift description: Roses
+Enter gift price: 5.99
+Enter gift units: 5
+Gift Details:
+Description: Roses
+Price: 5.99
+Units: 5
+Unwrapped
+Attempting to wrap the previous Gift: Roses
+----------------------------------------------------------------
+2 - 2 - 2 - 2 - 2 - 2 - 2 - 2 - 2 - 2
+Wrapping gifts...
+Enter the number of wrapping layers for the Gift: -1
+Layers at minimum must be 1, try again.
+Enter the number of wrapping layers for the Gift: 0
+Layers at minimum must be 1, try again.
+Enter the number of wrapping layers for the Gift: 3
+Enter wrapping pattern #1: Spots
+Enter wrapping pattern #2: Stripes
+Enter wrapping pattern #3: Zigzags
+Success!
+Attempting to rewrap the previous Gift: Roses
+----------------------------------------------------------------
+3 - 3 - 3 - 3 - 3 - 3 - 3 - 3 - 3 - 3
+Gift is already wrapped!
+Success2!
+Attempting to unwrap the previous Gift: Roses----------------------------------------------------------------
+4 - 4 - 4 - 4 - 4 - 4 - 4 - 4 - 4 - 4
+Gift being unwrapped.
+Success3!
+Attempting to un-unwrap the previous Gift: Roses
+----------------------------------------------------------------
+5 - 5 - 5 - 5 - 5 - 5 - 5 - 5 - 5 - 5
+Gift isn't wrapped! Can't unwrap.
+Success4!
+Prepare another empty Gift via the combined function and display it
+----------------------------------------------------------------
+6 - 6 - 6 - 6 - 6 - 6 - 6 - 6 - 6 - 6
+Preparing a gift...
+Enter gift description: Hand-knit-scarf
+Enter gift price: 0
+Enter gift units: 1
+Wrapping gifts...
+Enter the number of wrapping layers for the Gift: 1
+Enter wrapping pattern #1: Hearts
+Gift Details:
+Description: Hand-knit-scarf
+Price: 0
+Units: 1
+Wrap Layers: 1
+Wrap #1: Hearts
+End of main
+Gift being unwrapped.
+*/
