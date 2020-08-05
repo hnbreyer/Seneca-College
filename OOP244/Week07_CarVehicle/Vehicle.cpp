@@ -1,20 +1,8 @@
 //Vehicle.cpp
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 #define _CRT_SECURE_NO_WARNINGS
 
-
- //#include <iostream>
-
 #include "Vehicle.h"
-
-//using namespace std;
 
 namespace sdds
 {
@@ -33,8 +21,7 @@ namespace sdds
         else {
             m_speed = 0;
             m_noOfSeats = 0;
-        }
-     
+        }     
     }
 
     Vehicle::~Vehicle() {
@@ -59,8 +46,7 @@ namespace sdds
         }
         if (m_speed >= MIN_SPEED && m_noOfSeats > 0) {
             os << "|" << m_speed << "|" << m_noOfSeats << std::endl;
-        }
-       
+        }    
             if (m_speed > MAX_SPEED) {
             os << "Car has to be fine tuned for speed limit" << std::endl;
         }
@@ -80,8 +66,7 @@ namespace sdds
         return in;
     }
 
-//operator overload helpers
-std::ostream& operator<<(std::ostream& os, const Vehicle& v) {
+std::ostream& operator<<(std::ostream& os, const Vehicle& v) {                          //operator overload helpers
     v.display(os);
     return os;
 }
@@ -92,4 +77,3 @@ return in;
 }
 
 };
-
