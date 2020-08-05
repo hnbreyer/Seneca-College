@@ -1,18 +1,8 @@
-#pragma once
-
 //Engine.h
-
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
 
 #ifndef SDDS_ENGINE_H
 #define SDDS_ENGINE_H
 
-//#include <iostream>
 #include <cstring>
 
 const int MAX_LENGTH = 30;
@@ -34,12 +24,6 @@ namespace sdds
         void display() const; 
       
     };
-
-    
-    
-
-
 }
-
 
 #endif
