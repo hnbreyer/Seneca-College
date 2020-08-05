@@ -3,18 +3,7 @@
 // Version: 1.0
 // Date: 2/2/2020
 // Author: Elnaz Delpisheh
-// Description:
-// This file tests diy section of your workshp
 /////////////////////////////////////////////
-
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
-
 
 #include <iostream>
 #include "Ship.h"
@@ -24,10 +13,8 @@ using namespace std;
 using namespace sdds;
 int const MIN=90;
 
-
 int main()
-{
-    
+{   
     Engine engines[3]=
     {Engine("V8",6.0),
         Engine("V8",8.0),
@@ -52,8 +39,7 @@ int main()
     
     cout << endl<< endl;
     
-    //Adding an engine to the ship
-    cout << "Adding an engine to Titanic" << endl;
+    cout << "Adding an engine to Titanic" << endl;                                                      //Adding an engine to the ship
     
     Engine engine = Engine("V10",3.0);
     titanic += engine;
@@ -76,8 +62,7 @@ int main()
     
     cout << endl<< endl;
     
-    //Comparing with the standards:
-    cout<<"Comparing Titanic with the standards:"<<endl;
+    cout<<"Comparing Titanic with the standards:"<<endl;                                            //Comparing with the standards
     if(titanic<MIN)
         cout<<"Below average!"<<endl;
     else
@@ -91,10 +76,10 @@ int main()
     else
         cout<<"The ships have different power!"<<endl;
     
-    return 0;
-    
+    return 0;  
 }
-/*
+
+/* OUTPUT
 Testing Ship objects
 liner- 91.00
 6.00 liters - V8
