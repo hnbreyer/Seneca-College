@@ -1,14 +1,6 @@
 //Train.cpp
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 #define _CRT_SECURE_NO_WARNINGS
-
 
 #include <iostream>
 #include "Train.h"
@@ -68,8 +60,7 @@ namespace sdds
 
     void Train::loadCargo(Cargo carg) {
 
-        //Cargo* carg = nullptr;
-
+   
         cargo = new Cargo;
 
         strcpy(cargo->description, carg.description);
