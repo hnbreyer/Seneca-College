@@ -1,20 +1,8 @@
 //Basket.cpp
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 #define _CRT_SECURE_NO_WARNINGS
 
-
-//#include <iostream>
-
 #include "Basket.h"
-
-//using namespace std;
 
 namespace sdds
 {
@@ -42,11 +30,9 @@ namespace sdds
     }
 
     Basket::Basket(const Basket& bas) {
-        //shallow copies
-        m_qty = bas.m_qty;
+        m_qty = bas.m_qty;                                                                         //shallow copies
         m_price = bas.m_price;
-        //allocate dym memory for name
-        if (bas.m_fruitName != nullptr && bas.m_fruitName[0] != '\0') {
+        if (bas.m_fruitName != nullptr && bas.m_fruitName[0] != '\0') {                            //allocate dynamic memory for name
             int size = strlen(bas.m_fruitName);
             m_fruitName = new char[size + 1];
             strcpy(this->m_fruitName, bas.m_fruitName);
@@ -58,14 +44,13 @@ namespace sdds
     }
 
     Basket& Basket::operator=(const Basket& basket) {
-        if (this != &basket) { //check self assignment
+        if (this != &basket) {                                                                     //check self assignment
             m_qty = basket.m_qty;
             m_price = basket.m_price;
-            //deallocate previous allocated memory
-            delete[] m_fruitName;
-            //allocate new dynamic memory
-            if (basket.m_fruitName != nullptr) {
-                //setName(basket.m_fruitName);
+                                                                                              
+            delete[] m_fruitName;                                                                  //deallocate previous allocated memory
+                                                                                              
+            if (basket.m_fruitName != nullptr) {                                                   //allocate new dynamic memory
                 int size = 0;
                 size = strlen(basket.m_fruitName);
                 m_fruitName = new char[size + 1];
