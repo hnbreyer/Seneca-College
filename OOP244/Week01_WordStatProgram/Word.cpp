@@ -29,10 +29,10 @@ namespace sdds
 
     int searchWords(const Word words[], int num, const char word[]) {
         int i;
-        int foundIndex = -1;  // will be set to found index; if not found sould be less than 0
-        for (i = 0; foundIndex == -1 && i < num; i++) { // while not found and i is less than number of words
-            if (strcmp(words[i].letters, word) == 0) { // if word is already read and found in the list of previous words
-                foundIndex = i;   // set the index to be returned.
+        int foundIndex = -1;                                                                 // will be set to found index; if not found sould be less than 0
+        for (i = 0; foundIndex == -1 && i < num; i++) {                                      // while not found and i is less than number of words
+            if (strcmp(words[i].letters, word) == 0) {                                       // if word is already read and found in the list of previous words
+                foundIndex = i;                                                              // set the index to be returned.
             }
         }
         return foundIndex;
@@ -63,7 +63,7 @@ namespace sdds
                 }
                 else {
                     foundIndex = searchWords(words, NoOfWords, lowerCaseWord);
-                    if (foundIndex < 0) { // word not found in list; so word is new and never read before
+                    if (foundIndex < 0) {                                                  // word not found in list; so word is new and never read before
                         foundIndex = NoOfWords;
                         addWord(words, &NoOfWords, lowerCaseWord);
                     }
