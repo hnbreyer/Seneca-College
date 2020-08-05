@@ -1,12 +1,5 @@
 //Vehicle.h
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 #ifndef SDDS_VEHICLE_H
 #define SDDS_VEHICLE_H
 
@@ -31,11 +24,9 @@ namespace sdds
         std::istream& input(std::istream& in);
     };
 
-    //operator overload helpers
-    std::ostream& operator<<(std::ostream& os, const Vehicle& v);
+    std::ostream& operator<<(std::ostream& os, const Vehicle& v);                        //operator overload helpers
     std::istream& operator>>(std::istream& in, Vehicle& V);
 
 }
-
 
 #endif 
