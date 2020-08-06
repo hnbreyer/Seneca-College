@@ -8,11 +8,8 @@ Revision History
 -----------------------------------------------------------
 Date      Reason
 2020/3/27  Preliminary release
------------------------------------------------------------
-comment out car or motorcycle include and functions to test
-individually.
-
 */
+
 #include <iostream>
 #include "Car.h"
 #include "Motorcycle.h"
@@ -70,7 +67,8 @@ void  CarTest(Vehicle* V) {
    cout << endl << "Console Printout: " << endl << *V << endl;
    delete V;
 }
-/*
+
+/* OUTPUT
 Milestone 5, Car and Motorcycle:
 Car Test:
 
