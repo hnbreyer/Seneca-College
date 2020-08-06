@@ -3,21 +3,8 @@
 // Version: 1.0
 // Date: 03/11/2020
 // Author: Nargis Khan
-// Description:
-// Tests the Employee and its derived classes via virtual functions
-/////////////////////////////////////////////
-// -----------------------------------------------------------
-// Name Date Reason
-// Nargis
 /////////////////////////////////////////////////////////////////
 
-
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
 #include<iostream>
 #include "Doctor.h"
 #include "Doctor.h"
@@ -68,7 +55,7 @@ int main() {
    return 0;
 }
 
-/*
+/* OUTPUT
 ---------------------------------------------------------
 *** checking Doctor & Engineer default constructor ****
 Doctor is not initiated yet
@@ -119,6 +106,5 @@ Engineer details
 level: 4
 Salary: 9454.50
 Working hours: 8
-
 
 */
