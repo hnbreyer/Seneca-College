@@ -1,12 +1,5 @@
 //Doctor.cpp
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 #define _CRT_SECURE_NO_WARNINGS
 
 #include "Doctor.h"
@@ -16,6 +9,7 @@ namespace sdds
     Doctor::Doctor() {
         setEmpty();
     }
+    
     Doctor::Doctor(const char* type, double sal, int hours, bool spec) {
         if (type[0] != '\0' && sal > 0 && hours > 0) {
             strcpy(m_type, type);
@@ -25,8 +19,7 @@ namespace sdds
         }
         else {
             setEmpty();
-        }
-        
+        }        
     }
 
     void Doctor::setSalary(double sal) {
@@ -71,14 +64,10 @@ namespace sdds
         return os;
     }
 
-    //added functions
-    void Doctor::setEmpty() {
+    void Doctor::setEmpty() {                                                            //added function
         m_type[0] = {};
         m_salary = 0;
         m_whours = 0;
         m_specialist = false;
     }
-
-    //Doctor::~Doctor() {
-    //}
 }
