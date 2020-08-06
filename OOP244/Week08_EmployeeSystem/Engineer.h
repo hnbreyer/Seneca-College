@@ -1,11 +1,5 @@
 //Engineer.h
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
 #ifndef SDDS_ENGINEER_H__
 #define SDDS_ENGINEER_H__
 
@@ -28,9 +22,7 @@ namespace sdds
         bool workHours();
         void bonus();
         std::ostream& display(std::ostream& os) const;
-        //added functions
-        void setEmpty();
-       // virtual ~Engineer();
+        void setEmpty();                                                           //added function
     };
 }
 
