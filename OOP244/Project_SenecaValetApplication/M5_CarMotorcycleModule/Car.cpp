@@ -1,13 +1,6 @@
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
- //Car.cpp
+//Car.cpp
 
 #define _CRT_SECURE_NO_WARNINGS
-
 
 #include "Car.h"
 
@@ -25,7 +18,6 @@ namespace sdds
         carwash = false;
         Vehicle::setEmpty();
     }
-
 
     std::istream& Car::read(std::istream& istr) {
         char choice[8];
@@ -54,7 +46,6 @@ namespace sdds
                 carwash = false;
             }
         }
-
         return istr;
     }
 
@@ -81,10 +72,7 @@ namespace sdds
                     ostr << "Without Carwash" << std::endl;
                 }
             }
-
         }
         return ostr;
     }
-
-
 }
