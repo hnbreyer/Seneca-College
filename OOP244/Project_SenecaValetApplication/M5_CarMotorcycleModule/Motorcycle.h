@@ -1,14 +1,7 @@
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
- //Motorcycle.h
+//Motorcycle.h
 
 #ifndef SDDS_MOTORCYCLE_H
 #define SDDS_MOTORCYCLE_H
-
 
 #include <iostream>
 #include <cstring>
@@ -24,8 +17,8 @@ namespace sdds
         Motorcycle();
         Motorcycle(const char*, const char*);
         void setEmpty();
-        Motorcycle(Motorcycle&) = delete; //copy
-        Motorcycle& operator=(Motorcycle&) = delete; //copy assignment
+        Motorcycle(Motorcycle&) = delete;                                                  //copy
+        Motorcycle& operator=(Motorcycle&) = delete;                                       //copy assignment
         std::istream& read(std::istream& istr = std::cin);
         std::ostream& write(std::ostream& ostr = std::cout) const;
     };
