@@ -1,11 +1,5 @@
 //NumbersBox.h
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
 #ifndef SDDS_NUMBERSBOX_H__
 #define SDDS_NUMBERSBOX_H__
 
@@ -50,12 +44,6 @@ namespace sdds
         T& operator[] (int i) {
             return m_items[i];
         }
-
-        /* T temp;
-            for (int j; j < m_size; j++) {
-                temp[j] = temp[i];
-            }
-            return *this;*/
 
         NumbersBox<T>& operator*=(const NumbersBox<T>& other) {
             if (this->m_items != nullptr && other.m_items != nullptr && this->m_size == other.m_size) {
@@ -105,14 +93,12 @@ namespace sdds
                     }
                     else {
                         os << m_items[i] << ", ";
-                    }
-                    
+                    }                  
                 }
                 os << std::endl;
             }
             return os;
         }
-
     };
 
     template <typename T>
