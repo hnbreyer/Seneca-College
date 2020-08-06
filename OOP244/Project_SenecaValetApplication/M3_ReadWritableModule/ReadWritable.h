@@ -1,10 +1,4 @@
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
- //ReadWritable.h
+//ReadWritable.h
 
 #ifndef SDDS_READWRITABLE_H
 #define SDDS_READWRITABLE_H
@@ -21,14 +15,11 @@ namespace sdds
         virtual ~ReadWritable();
         bool isCsv() const;
         void setCsv(bool value);
-        //read and write
-        virtual std::istream& read(std::istream& istr = std::cin) = 0;
-        virtual std::ostream& write(std::ostream& ostr = std::cout) const = 0;
+        virtual std::istream& read(std::istream& istr = std::cin) = 0;                                                  //read
+        virtual std::ostream& write(std::ostream& ostr = std::cout) const = 0;                                          //write
     };
 
-    //operator overload helpers
-    std::ostream& operator<<(std::ostream& ostr, const ReadWritable& Read);
-
+    std::ostream& operator<<(std::ostream& ostr, const ReadWritable& Read);                                             //operator overload helpers
     std::istream& operator>>(std::istream& istr, ReadWritable& Write);
 }
 
