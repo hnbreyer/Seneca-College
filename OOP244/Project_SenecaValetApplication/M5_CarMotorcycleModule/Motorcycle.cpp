@@ -1,13 +1,6 @@
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
- //Car.cpp
+//Car.cpp
 
 #define _CRT_SECURE_NO_WARNINGS
-
 
 #include "Motorcycle.h"
 
