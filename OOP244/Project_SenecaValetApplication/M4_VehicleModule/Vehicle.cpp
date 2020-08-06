@@ -1,13 +1,6 @@
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
- //Vehicle.cpp
+//Vehicle.cpp
 
 #define _CRT_SECURE_NO_WARNINGS
-
 
 #include "Vehicle.h"
 
@@ -69,8 +62,7 @@ namespace sdds
             m_makeModel[strlen(mkmodel)] = '\0';
         }
         else {
-            setEmpty();
-        
+            setEmpty();       
         }
     }
 
@@ -87,17 +79,17 @@ namespace sdds
         }
     }
 
-    bool Vehicle::operator==(const char* otherLicense) const { //compares 2 license plates
+    bool Vehicle::operator==(const char* otherLicense) const {                                              //compares 2 license plates
         bool identical = false;
-        if (strcasecmp(this->m_license, otherLicense) == 0) {
+        if (strcasecmp(this->m_license, otherLicense) == 0) {                                               //_stricmp in VS; requires <cctype> 
             identical = true;
         }
         return identical;
     }
 
-    bool Vehicle::operator==(const Vehicle& other) const { //compares 2 vehicles
+    bool Vehicle::operator==(const Vehicle& other) const {                                                  //compares 2 vehicles
         bool identic = false;
-        if (strcasecmp(this->m_license, other.m_license) == 0) {
+        if (strcasecmp(this->m_license, other.m_license) == 0) {                                            //_stricmp in VS; requires <cctype> 
             identic = true;
         }
         return identic;
@@ -141,8 +133,6 @@ namespace sdds
             } while (strlen(m_license) > 8);
 
             charToUpper(m_license);
-            //istr.ignore(2000, '\n');
-            //istr.ignore();
   
             std::cout << "Enter Make and Model: ";
             char temp_makemodel[61] = { '\0' };
@@ -199,6 +189,4 @@ namespace sdds
         }
         return ostr;
     }
-
-
 }
