@@ -1,22 +1,13 @@
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
 //Menu.cpp
 
 #define _CRT_SECURE_NO_WARNINGS
-
 
 #include "Menu.h"
 #include "string"
 
 namespace sdds
 {
-    //menuItem functions
-
-    MenuItem::MenuItem() {
+    MenuItem::MenuItem() {                                                                           //menuItem functions
         m_itemName = nullptr;
     }
 
@@ -47,11 +38,9 @@ namespace sdds
         delete[] m_itemName;
         m_itemName = nullptr;
     }
+    
 
-    //menu functions
-
-    Menu::Menu(const char* t, int indent) :m_menuArr{ nullptr } {
-        // setEmpty();
+    Menu::Menu(const char* t, int indent) :m_menuArr{ nullptr } {                                 //menu functions
         if (t != nullptr && t[0] != '\0') {
 
             int size = 0;
@@ -59,7 +48,6 @@ namespace sdds
             m_title = new char[size + 1];
             strcpy(m_title, t);
             m_title[size] = '\0';
-
             m_indent = indent;
             number_menuItems = 0;
         }
@@ -78,7 +66,6 @@ namespace sdds
         }
         number_menuItems = 0;
         m_indent = 0;
-
     }
 
     void Menu::init(const Menu& menu) {
@@ -90,16 +77,13 @@ namespace sdds
 
             for (int i = 0; i < menu.number_menuItems; i++) {
                 m_menuArr[i] = new MenuItem(menu.m_menuArr[i]->m_itemName);
-
             }
             m_indent = menu.m_indent;
             number_menuItems = menu.number_menuItems;
-
         }
         else {
             setEmpty();
         }
-
     }
 
     Menu::Menu(const Menu& mn) {
@@ -121,7 +105,6 @@ namespace sdds
         return *this;
     }
 
-
     Menu::operator bool() const {
         bool empty = false;
         if (m_title != nullptr && m_menuArr[0] != nullptr && number_menuItems != 0) {
@@ -137,7 +120,6 @@ namespace sdds
         }
         return empty;
     }
-
 
     std::ostream& Menu::display(std::ostream& os) const {
         if (isEmpty()) {
@@ -167,14 +149,11 @@ namespace sdds
                 if (m_menuArr[0] != nullptr) {
 
                     std::cout << indent << "> ";
-
                 }
             }
         }
         return os;
     }
-
-
 
     Menu& Menu::operator=(const char* nam) {
         if (nam != nullptr && nam[0] != '\0') {
@@ -190,7 +169,6 @@ namespace sdds
         }
         return *this;
     }
-
 
     void Menu::add(const char* tl) {
         if (!isEmpty()) {
@@ -213,20 +191,15 @@ namespace sdds
 
     Menu& Menu::operator<<(const char* menuitem) {
         if (menuitem != nullptr && menuitem[0] != '\0' && m_title != nullptr) {
-
             add(menuitem);
         }
         else {
             setEmpty();
         }
-
         return *this;
     }
 
-
-
     int Menu::run() const {
-
         int choice;
         display();
 
@@ -247,18 +220,14 @@ namespace sdds
                 std::cin.clear();
                 std::cin.ignore(2000, '\n');
                 std::cin >> choice;
-
             }
             std::cin.clear();
             std::cin.ignore(2000, '\n');
         }
-
-
         return choice;
     }
 
     Menu::operator int() const {
-
         return run();
     }
 
@@ -270,8 +239,5 @@ namespace sdds
             delete m_menuArr[i];
             m_menuArr[i] = nullptr;
         }
-
     }
 }
-
-
