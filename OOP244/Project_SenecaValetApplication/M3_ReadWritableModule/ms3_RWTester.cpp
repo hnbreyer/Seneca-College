@@ -10,14 +10,6 @@ Date      Reason
 2020/3/23  Preliminary release
 -----------------------------------------------------------*/
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
-
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -155,7 +147,7 @@ void test4() {
    cout << "**************************************************************" << endl;
 }
 
-/*
+/* OUTPUT
 Testing operator<< overload (pass 1):
 These two outputs should match
 Output 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
