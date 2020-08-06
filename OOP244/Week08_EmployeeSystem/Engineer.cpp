@@ -1,12 +1,5 @@
 //Engineer.cpp
 
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
 #define _CRT_SECURE_NO_WARNINGS
 
 #include "Engineer.h"
@@ -70,13 +63,9 @@ namespace sdds
         return os;
     }
 
-    //added functions
-    void Engineer::setEmpty() {
+    void Engineer::setEmpty() {                                                       //added function
         m_esalary = 0;
         m_ewhours = 0;
         m_level = 0;
     }
-
-    //Engineer::~Engineer() {
-    //}
 }
