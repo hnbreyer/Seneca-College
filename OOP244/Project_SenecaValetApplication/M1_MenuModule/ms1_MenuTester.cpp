@@ -1,11 +1,3 @@
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
-
-
 /* ------------------------------------------------------
 Final Project Milestone 1
 Module: Menu
@@ -251,8 +243,5 @@ M1T11: Adding invalid string to render Menu invalid
 ==================>
 Invalid Menu!
 Invalid Menu!
-
-
-
 
 */
