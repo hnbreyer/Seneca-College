@@ -4,22 +4,7 @@
 // Version 1.0
 // Date	2020/3/20
 // Author	Hong Zhan (Michael) Huang
-// Description
-// Tests the Calculator template and its functions
-//
-// Revision History
-// -----------------------------------------------------------
-// Name            Date            Reason
-// Michael
-/////////////////////////////////////////////////////////////////
-***********************************************************************/
-
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
+/***********************************************************************/
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -93,7 +78,7 @@ int main() {
   return 0;
 }
 
-/* EXPECTED OUTPUT
+/* OUTPUT
 Create an int and double NumbersBox
 ----------------------------------------------------------------
 1 - 1 - 1 - 1 - 1 - 1 - 1 - 1 - 1 - 1
