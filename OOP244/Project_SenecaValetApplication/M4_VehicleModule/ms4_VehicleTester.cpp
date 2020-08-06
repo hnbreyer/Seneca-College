@@ -9,16 +9,7 @@ Revision History
 Date      Reason
 2020/3/25  Preliminary release
 -----------------------------------------------------------*/
-
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
  
-
-
 #include <iostream>
 #include "Vehicle.h"
 using namespace std;
@@ -29,7 +20,6 @@ void TestIO(Vehicle& V);
 int main() {
    Vehicle V;
    Vehicle C("abcd", "C car");
-   // you can comment each test to develop your Vehicle step by step: 
    TestIO(V);
    TestOperatorEqualEqual(C, V);
    TestValidations();
@@ -108,8 +98,7 @@ void TestOperatorEqualEqual(const Vehicle& A, const Vehicle& B) {
    }
 }
 
-/*
-Ouput:
+/* OUTPUT
 Invalid Vehicle Printing:
 Invalid Vehicle Object
 
@@ -176,7 +165,5 @@ Make and Model: ab
 
 invalid setting:
 Invalid Vehicle Object
-
-
 
 */
