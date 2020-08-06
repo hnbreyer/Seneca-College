@@ -1,14 +1,7 @@
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- **********************************************************/
- //Car.h
+//Car.h
 
 #ifndef SDDS_CAR_H
 #define SDDS_CAR_H
-
 
 #include <iostream>
 #include <cstring>
@@ -24,8 +17,8 @@ namespace sdds
         Car();
         Car(const char*, const char*);
         void setEmpty();
-        Car(Car&) = delete; //copy
-        Car& operator=(Car&) = delete; //copy assignment
+        Car(Car&) = delete;                                                          //copy
+        Car& operator=(Car&) = delete;                                               //copy assignment
         std::istream& read(std::istream& istr = std::cin);
         std::ostream& write(std::ostream& ostr = std::cout) const;
 
