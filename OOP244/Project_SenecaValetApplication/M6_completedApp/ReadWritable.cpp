@@ -1,14 +1,6 @@
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
-  ///I have done all the coding by myself and only copied the code that my professor provided to complete this program///
- **********************************************************/
- //ReadWritable.cpp
+//ReadWritable.cpp
 
 #define _CRT_SECURE_NO_WARNINGS
-
 
 #include "ReadWritable.h"
 
@@ -38,5 +30,4 @@ namespace sdds
         Write.read(istr);
         return istr;
     }
-
 }
