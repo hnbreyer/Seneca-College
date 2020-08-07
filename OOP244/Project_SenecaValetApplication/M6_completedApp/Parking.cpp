@@ -1,23 +1,15 @@
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
- ///I have done all the coding by myself and only copied the code that my professor provided to complete this program///
- **********************************************************/
- //Parking.cpp
+//Parking.cpp
 
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <iostream>
 #include "Parking.h"
 
-
 namespace sdds
 {
     //member initializer list for menu titles
-    Parking::Parking(const char* fName, int noOfSpots) : p_parkingMenu("Parking Menu, select an action:"), p_vehicleSelection("Select type of the vehicle:", 1), p_parkingSpotarray{ nullptr } {
-
+    Parking::Parking(const char* fName, int noOfSpots) : p_parkingMenu("Parking Menu, select an action:"), p_vehicleSelection("Select type of the vehicle:", 1), p_parkingSpotarray{ nullptr } 
+ {
         p_filename = nullptr;
         if (fName != nullptr && fName[0] != '\0' && noOfSpots >= 10 && noOfSpots <= MAX_NUM_PSPOTS) {
             if (p_filename == nullptr) {
@@ -84,17 +76,14 @@ namespace sdds
                bool error = false; 
                v->setCsv(false);
                v->read(std::cin);
-               //search through array to find first null space
         
-               for (int i = 0; i <p_noOfSpots && !error; i++) {
+               for (int i = 0; i <p_noOfSpots && !error; i++) {                                         //search through array to find first null space
                   if (p_parkingSpotarray[i] == nullptr) {
                       p_parkingSpotarray[i] = v;
                       p_parkingSpotarray[i]->setParkingSpot(i + 1);
-                       error = true;    //flag to exit loop
+                       error = true;                                                                    //flag to exit loop
                   }
-  
                }
-
                 p_numParkedVehicles++;
 
                    std::cout << '\n';
@@ -111,31 +100,23 @@ namespace sdds
 
             for (int i = 0; i < p_noOfSpots && !error_; i++) {
                 if (p_parkingSpotarray[i] == nullptr) {
-
                     p_parkingSpotarray[i] = v;
                     p_parkingSpotarray[i]->setParkingSpot(i + 1);
-
-                        error_ = true;
-   
-                }
-               
+                    error_ = true;   
+                }               
             }
                         p_numParkedVehicles++;
-
                         std::cout << '\n';
                         std::cout << "Parking Ticket" << std::endl;
                         std::cout << *v;
-                        std::cout << '\n';
-          
+                        std::cout << '\n';          
             }
                 break;
             case 3: std::cout << "Parking cancelled" << std::endl;
                 break;
             }
         }
-
     }
-
 
     void Parking::returnVehicle() {
         std::cout << "Return Vehicle" << std::endl;
@@ -148,7 +129,6 @@ namespace sdds
             std::cout << "Invalid Licence Plate, try again: ";
             std::cin >> temp_lic;
             charToUpper(temp_lic);
-            //std::cin.ignore();
         }
     
             bool check = false;
@@ -158,12 +138,11 @@ namespace sdds
                     case true: {
                         index = i;
                         check = true;
-
                     }
                              break;        
-                    }
-                    
+                    }                   
                 }
+     
             if (check == true) {
             std::cout << '\n';
             std::cout << "Returning: " << std::endl;
@@ -177,15 +156,11 @@ namespace sdds
             else {
                 std::cout << "License plate " << temp_lic << " Not found" << std::endl;
             }
-           
-
         }
     
-
     char* Parking::charToUpper(char* ch) const {
         int length = strlen(ch);
         for (int i = 0; i < length; i++) {
-
             if (ch[i] >= 'a' && ch[i] <= 'z') {
                 ch[i] = ch[i] - ('a' - 'A');
             }
@@ -239,12 +214,9 @@ namespace sdds
                         p_numParkedVehicles--;
                         close = true;
                     }
-
-                }
-                
+                }                
             }
             else if ((choice[0] == 'N' || choice[0] == 'n') && strlen(choice) == 1) {
-
                 close = false;
                 std::cout << "Aborted!" << std::endl;
             }
@@ -252,14 +224,12 @@ namespace sdds
             return close;
         }
     
-
     bool Parking::exitParkingApp() const {
         bool userChoice = false;
         char choice[8];
         std::cout << "This will terminate the program!" << std::endl;
         std::cout << "Are you sure? (Y)es/(N)o: ";
         std::cin.getline(choice, 8);
-
 
         while (!(choice[1] == '\0')) {
             std::cout << "Invalid response, only (Y)es or (N)o are acceptable, retry: ";
@@ -286,7 +256,6 @@ namespace sdds
             }
         if (fin.fail() || isEmpty()) {
             fin.good();
-
         }
        
         Vehicle* v;
@@ -301,13 +270,11 @@ namespace sdds
                     v = new Motorcycle();
                 }
                 else if (f == 'C') {
-                    v = new Car(); 
-                  
+                    v = new Car();                 
                 }
                 if (v) {
                     v->setCsv(true);
-                    //v->read(fin);
-                    fin >> *v;
+                    fin >> *v;                                                                 //also works: v->read(fin);
                     fin.ignore();
                   
                     if (fin) {
@@ -331,7 +298,6 @@ namespace sdds
         if (!isEmpty()) {
             fout.open(p_filename);
 
-
             if (fout.good()) {
                 for (int i = 0; i <= p_noOfSpots; i++) {
                     if (p_parkingSpotarray[i] != nullptr) {
@@ -344,8 +310,7 @@ namespace sdds
         fout.close();
     }
 
-    //added function
-    void Parking::setEmpty() {
+    void Parking::setEmpty() {                                                                   //added function
         p_filename = nullptr;
         p_parkingMenu = nullptr;
         p_vehicleSelection = nullptr;
@@ -361,11 +326,9 @@ namespace sdds
         int p_run = 0;
         if (!isEmpty()) {
             parkingStatus();
-            //using run function from Menu class
-            switch (p_parkingMenu.Menu::run()) {
+            switch (p_parkingMenu.Menu::run()) {                                                    //using run function from Menu class
             case 1: parkVehicle();
-                //using run function from Parking class
-                run();
+                run();                                                                              //using run function from Parking class
                 break;
             case 2: returnVehicle();
                 run();
@@ -380,8 +343,7 @@ namespace sdds
                 else {
 
                     run();
-                }
-                
+                }                
                     break;
             case 5:
                 if (exitParkingApp()) {
@@ -394,5 +356,4 @@ namespace sdds
         }
         return p_run;
     }
-
 }
