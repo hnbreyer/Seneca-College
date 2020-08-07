@@ -1,14 +1,6 @@
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
-  ///I have done all the coding by myself and only copied the code that my professor provided to complete this program///
- **********************************************************/
- //Vehicle.cpp
+//Vehicle.cpp
 
 #define _CRT_SECURE_NO_WARNINGS
-
 
 #include "Vehicle.h"
 
@@ -59,7 +51,6 @@ namespace sdds
         return *m_makeModel;
     }
 
-
     void Vehicle::setMakeModel(const char* mkmodel) {
         if (mkmodel != nullptr && mkmodel[0] != '\0' && strlen(mkmodel) > 1) {
             if (m_makeModel != nullptr) {
@@ -71,7 +62,6 @@ namespace sdds
         }
         else {
             setEmpty();
-
         }
     }
 
@@ -88,7 +78,7 @@ namespace sdds
         }
     }
 
-    bool Vehicle::operator==(const char* otherLicense) const { //compares 2 license plates
+    bool Vehicle::operator==(const char* otherLicense) const {                                           //compares 2 license plates
         bool identical = false;
         if (_stricmp(this->m_license, otherLicense) == 0) {
             identical = true;
@@ -96,16 +86,13 @@ namespace sdds
         return identical;
     }
 
-    bool Vehicle::operator==(const Vehicle& other) const { //compares 2 vehicles
+    bool Vehicle::operator==(const Vehicle& other) const {                                               //compares 2 vehicles
         bool identic = false;
-        if (_stricmp(this->m_license, other.m_license) == 0) {
+        if (_stricmp(this->m_license, other.m_license) == 0) {                                           //strcasecmp in Matrix; requires <strings.h>
             identic = true;
         }
         return identic;
     }
-
-    //////change to strcasecmp before submitting
-
 
     std::istream& Vehicle::read(std::istream& istr) {
         if (this->isCsv()) {
@@ -114,7 +101,6 @@ namespace sdds
                 istr.ignore(1, ',');
                 istr.getline(m_license, 10, ',');
                 charToUpper(m_license);
-                //istr.ignore(2, ',');  //??
 
                 char temp_makemodel[20] = { '\0' };
                 istr.getline(temp_makemodel, 21, ',');
@@ -131,9 +117,6 @@ namespace sdds
         }
         else {
             if (istr) {
-                //for (int i = 0; i < MAX_LICENSE; i++) {
-                 //   m_license[i] = '\0';
-               // }
                 std::cout << "Enter Licence Plate Number: ";
                 istr.getline(m_license, 10, '\n');
                     while (strlen(m_license) > 8 || m_license[1] == '\0') {
@@ -141,11 +124,7 @@ namespace sdds
                         istr >> m_license;
                         istr.ignore();
                 }
-
-                charToUpper(m_license);
-               
-                //istr.ignore(2000, '\n');
-                //istr.ignore();
+                charToUpper(m_license);          
 
                 std::cout << "Enter Make and Model: ";
                 char temp_makemodel[20] = { '\0' };
@@ -155,17 +134,14 @@ namespace sdds
                     std::cout << "Invalid Make and model, try again: ";
                     istr >> temp_makemodel;
                     istr.ignore();
-                }
-                
+                }             
                 setMakeModel(temp_makemodel);
                 int size = strlen(temp_makemodel);
                 for (int i = 0; i < size; i++) {
                     m_makeModel[i] = temp_makemodel[i];
                 }
                 m_makeModel[size] = '\0';
-
-                m_parkingSpot = 0;
-                
+                m_parkingSpot = 0;              
             }
             else if (istr.fail()) {
                 setEmpty();
@@ -177,7 +153,6 @@ namespace sdds
     char* Vehicle::charToUpper(char* ch) const {
         int length = strlen(ch);
         for (int i = 0; i < length; i++) {
-
             if (ch[i] >= 'a' && ch[i] <= 'z') {
                 ch[i] = ch[i] - ('a' - 'A');
             }
@@ -207,6 +182,4 @@ namespace sdds
         }
         return ostr;
     }
-
-
 }
