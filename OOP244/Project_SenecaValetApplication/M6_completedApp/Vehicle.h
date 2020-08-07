@@ -1,19 +1,11 @@
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
-  ///I have done all the coding by myself and only copied the code that my professor provided to complete this program///
- **********************************************************/
- //Vehicle.h
+//Vehicle.h
 
 #ifndef SDDS_VEHICLE_H
 #define SDDS_VEHICLE_H
 
 #include <iostream>
 #include <cstring>
-#include <string.h>
-///////change to strings.h before submitting
+#include <string.h>                                                                                  //Visual Studio; allows _stricmp
 
 #include "ReadWritable.h"
 
@@ -39,13 +31,12 @@ namespace sdds
         ~Vehicle();
         int getParkingSpot() const;
         void setParkingSpot(const int pSpot);
-        bool operator==(const char* otherLicense) const; //compares 2 license plates
-        bool operator==(const Vehicle& other) const; //compares 2 vehicles
+        bool operator==(const char* otherLicense) const;                                            //compares 2 license plates
+        bool operator==(const Vehicle& other) const;                                                //compares 2 vehicles
         std::istream& read(std::istream& istr);
         std::ostream& write(std::ostream& ostr) const;
         char* charToUpper(char* ch) const;
     };
 }
-
 
 #endif
