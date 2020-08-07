@@ -1,14 +1,6 @@
-/**********************************************************
- * Name: Helen Nunes Breyer
- * Student ID: 120046198
- * Seneca email: hnunes-breyer@myseneca.ca
- * Section: NEE
-  ///I have done all the coding by myself and only copied the code that my professor provided to complete this program///
- **********************************************************/
- //Car.cpp
+//Car.cpp
 
 #define _CRT_SECURE_NO_WARNINGS
-
 
 #include "Motorcycle.h"
 
@@ -36,8 +28,6 @@ namespace sdds
         else {
             std::cout << std::endl;
             std::cout << "Motorcycle information entry" << std::endl;
-            //istr.clear();
-            //istr.ignore(2000, '\n');
             Vehicle::read(istr);
             std::cout << "Does the Motorcycle have a side car? (Y)es/(N)o: ";
             istr.getline(choice, 8);
@@ -46,13 +36,10 @@ namespace sdds
                 std::cout << "Invalid response, only (Y)es or (N)o are acceptable, retry: ";
                 istr.getline(choice, 8);
             }
-
             if ((choice[0] == 'Y' || choice[0] == 'y') && strlen(choice) == 1) {
                 sidecar = true;
             }
             else if ((choice[0] == 'N' || choice[0] == 'n') && strlen(choice) == 1) {
-               // istr.clear();
-                //istr.ignore(2000, '\n');
                 sidecar = false;
             }
         }
