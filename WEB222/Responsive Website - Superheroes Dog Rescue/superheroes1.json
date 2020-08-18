@@ -1,0 +1,78 @@
+{
+    "squadName" : "Super Dogs' Squad",
+    "info" : [
+      {
+        "name" : "Peter",
+        "age" : 13,
+        "gender": "Male",
+        "secretIdentity" : "Maltese Mix",
+        "powers" : [
+          "Small size",
+          "Extra cuteness",
+          "Not very social around other dogs; Peter is lookign for a home as an only dog."
+        ],
+        "image": "images/dog1.jpg"
+      },
+      {
+        "name" : "Sven",
+        "age" : 6,
+        "gender": "Male",
+        "secretIdentity" : "Koolie Mix",
+        "powers" : [
+          "Very happy dog",
+          "Hyperactive",
+          "Ideally going to a home with someone who has dog training"
+        ],
+        "image": "images/dog2.jpg"
+      },
+      {
+        "name" : "Jarrah",
+        "age" : 1,
+        "gender": "Female",
+        "secretIdentity" : "Staffordshire Bull Terrier Mix",
+        "powers" : [
+          "Very loving nature, to both humans and other dogs",
+          "Lots of youthful energy",
+          "Ideally a home with other dogs, and someone with time for training"
+          
+        ],
+        "image": "images/dog3.jpg"
+      },
+      {
+        "name" : "Angel",
+        "age" : 9,
+        "gender": "Female",
+        "secretIdentity" : "Staffordshire Bull Terrier X Kelpie",
+        "powers" : [
+          "A little feisty and anxious",
+          "Adores the company of people, and can't be left alone for more thana short while",
+          "Not very fond of other dogs, and does not like cats either"
+        ],
+        "image": "images/dog4.jpg"
+      },
+      {
+        "name" : "Tom",
+        "age" : 2,
+        "gender": "Male",
+        "secretIdentity" : "Dalmatian Mix",
+        "powers" : [
+          "Very friendly and lovely-natured",
+          "Tom arrived with Lucy, they are looking for a home together and are inseparable.",
+          "Lucy is deaf and relies on Tom."
+        ],
+        "image": "images/dog5.jpg"
+      },
+      {
+        "name" : "Lucy",
+        "age" : 2,
+        "gender": "Female",
+        "secretIdentity" : "Dalmatian Mix",
+        "powers" : [
+          "Very friendly and lovely-natured",
+          "Lucy arrived with her friend Tom, they are looking for a home together and are inseparable",
+          "Lucy is deaf and relies on Tom."
+        ],
+        "image": "images/dog6.jpg"
+      }
+    ]
+  }
