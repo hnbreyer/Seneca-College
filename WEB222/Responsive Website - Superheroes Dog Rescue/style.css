@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+ 
+  /* HEADER */
+
+   header {
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  } 
+
+  .responsive {
+    width: 100%;
+  height: auto;
+  }
+
+  #contactHeader{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #004445;
+    font-family: 'Pathway Gothic One', sans-serif;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 7px;
+  }
+
+  #contactHeader:hover{
+    color:#ffd800;
+  }
+  
+  /* Container for flexboxes */
+  .section {
+    display: -webkit-flex;
+    display: flex;
+    color: #004445;
+   
+  }
+  
+  /* Style the navigation menu */
+  nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #ccc;
+    padding: 20px;
+    background-color: #004445;
+    
+    
+  }
+  
+  /* Style the list inside the menu */
+  nav ul {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    
+
+  }
+
+  nav ul li {
+    padding: 10px;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 27px;
+  }
+
+  nav ul li a{
+    text-decoration:none;
+    color: #ffd800;
+    
+
+  }
+  
+  /* Style the content */
+  article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: #6fb98f;
+    padding: 5px;
+    text-align: center;
+    color: #ffff;
+  }
+  
+  /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+
+   /*STYLING CARDS*/
+
+ /* Float four columns side by side */
+   #dataSection {
+    padding: 0 10px;
+  } 
+
+  /* Remove extra left and right margins, due to padding */
+  #mainArea {
+      margin: 0 -5px;
+      padding: 15px;
+ }
+  
+  /* Clear floats after the columns */
+  #mainArea:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+ /* Style the counter cards */
+ .card {
+     display: inline-flex;
+     flex-wrap: wrap;
+     flex-direction: row; 
+     margin-left: 10px; 
+     margin-bottom: 10px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     padding: 10px;
+     width: 48%;
+     text-align: center;
+     background-color: #f1f1f1;
+     
+   }
+ 
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .card  {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    #dataSection #mainArea  {
+      width: 100%;
+      padding-right:10px;
+      padding-left: 0;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .centerImg {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+
+  .card h2 {
+    width: 100%;
+    text-align: center;
+    box-sizing: revert;
+  }
+
+ 
+
+   .card p {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 5px 5px 5px 30px;
+  } 
+
+  .centerImg {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     padding: 16px;
+     border-radius: 50%;
+     /*width: 50%;*/
+   }
+ 
+   .adoptButton {
+      display: block;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 5px 5px 5px 30px;
+      background-image: url(images/yellow-dog-paw.png);
+      background-position: left;
+      background-repeat: no-repeat;
+   }
