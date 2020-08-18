@@ -1,0 +1,68 @@
+{
+    "squadName" : "Super Cat's Squad",
+    "info" : [
+      {
+        "name" : "Hugo",
+        "age" : 9,
+        "gender": "Male",
+        "secretIdentity" : "Domestic Short Hair",
+        "powers" : [
+          "Hugo was a bit shy at first, but is a very lovely cat",
+          "Prefers indoors",
+          "May need a little time to settle in a new home, but once he is comfortable, he is very friendly"
+        ],
+        "image": "images/cat1.jpg"
+      },
+      {
+        "name" : "Hazel",
+        "age" : 2,
+        "gender": "Female",
+        "secretIdentity" : "Domestic Short Hair",
+        "powers" : [
+          "Beautiful nature, will be a lovely family cat",
+          "Likes to be able to get into the sunshine",
+          "Preferably a home with other cats. She is also used to dogs in her environment."
+        ],
+        "image": "images/cat2.jpg"
+      },
+      {
+        "name" : "Charlie",
+        "age" : 6,
+        "gender": "Female",
+        "secretIdentity" : "Domestic Medium Hair",
+        "powers" : [
+          "Shy nature",
+          "Another cat company would help her settle in her new home",
+          "Charlie needs an experienced onwer who has time to work with her and gain her trust",
+          "Lovely companion once has settled down"
+        ],
+        "image": "images/cat3.jpg"
+      },
+      {
+        "name" : "Aspey",
+        "age" : 7,
+        "gender": "Male",
+        "secretIdentity" : "Domestic Medium Hair",
+        "powers" : [
+          "Aspey loves to play and has the sweetest face",
+          "He is vocal, and adores a brush from time to time",
+          "Aspey needs an experienced onwer, as he can be a little unsure of himself at times",
+          "Prefers a home without kids or dogs, but goes well with other cats"
+        ],
+        "image": "images/cat4.jpg"
+      },
+      {
+        "name" : "Tabitha",
+        "age" : 11,
+        "gender": "Female",
+        "secretIdentity" : "Domestic Short Hair",
+        "powers" : [
+          "Tabitha is a bit shy at first, but a lovely company",
+          "She would like to be the only cat in her new home",
+          "It will be very rewarding to watch her progress as she transitions from shyness to relaxed and content"
+          
+        ],
+        "image": "images/cat5.jpg"
+      }
+    ]
+  }
