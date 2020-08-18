@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Superheroes Rescue Shelter</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="style.css" rel="stylesheet">
+<link href="contact.css" rel="stylesheet">
+<script type="text/javascript" src="contact.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+
+  <img src="images/superheroes-logo-narrower.jpg" class="responsive"> 
+
+  <a id="contactHeader" href="contact.html">Contact Us</a>
+
+</header>
+
+<section class="section">
+  <nav>
+    <ul>
+      <li><a href="index.html">Return to homepage</a></li>
+      
+      
+    </ul>
+  </nav>
+  <article>
+    <br>
+
+    <h2 style="text-align: center;  font-family: 'Pathway Gothic One', sans-serif;">WELCOME TO THE SUPERHEROES RESCUE SHELTER!</h2>
+    
+      <div id="mainArea">
+
+     
+  
+
+
+        <div id="dataHeader">
+       
+
+    </div>
+
+    <section id="dataSection"> 
+
+        <section id="formSection">
+            <h3>Please fill up the following form to be registered.</h3>
+           <div id="form">
+            <form action="https://httpbin.org/post" method="POST" name="signup" onsubmit="return checkAllData();">
+                
+                First Name: <br>
+                <input type="text" name="name" autofocus required/> <br/><br>
+                Last Name: <br>
+                <input type="text" name="surname" required/><br/> <br>
+                Email: <br>
+                <input type="email" name="email" required/><br/><br>
+                Street Number: <br>
+                <input type="text" name="street" required/><br/><br>
+                Street Name: <br>
+                <input type="text" name="street_name" required/><br/><br>
+                Unit Number: <br>
+                <input type="text" name="unit" required/><br/><br>
+                Province: <br>
+                <select name="province" id="province">
+                           <option value="ONTARIO">Ontario</option>
+                           <option value="British Columbia">British Columbia</option>
+                           <option value="Quebec">Quebec</option>
+                           <option value="Alberta">Alberta</option>
+                           <option value="Nova Scotia">Nova Scotia</option>
+                           <option value="Manitoba">Manitoba</option>
+                           <option value="Saskatchewan">Saskatchewan</option>
+                           <option value="New Brunswick">New Brunswick</option>
+                           <option value="Prince Edward Island">Prince Edward Island</option>
+                         </select><br/><br>
+                City : <br>
+                <input type="text" list="cities" name="city" required/><br/>
+                <datalist id="cities">
+                    <option value="Toronto">
+                    <option value="Montreal">
+                    <option value="Vancouver">
+                    <option value="Calgary">
+                    <option value="Edmonton">
+                    <option value="Ottawa">
+                    <option value="Quebec City">
+                    <option value="Niagara Falls">
+                    <option value="Victoria">
+                    <option value="Halifax">
+                </datalist><br>
+                Postal Code: <br>
+                <input type="text" name="postal_code" pattern="^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$" autofocus required title="format allowed (Letter Digit Letter Digit Letter Digit)" placeholder="M2K 1K9" required/><br><br>
+                Phone number: <br>
+                <input type="text" pattern="^\d{3}-\d{3}-\d{4}$" autofocus required title="XXX-XXX-XXXX" name="phone" placeholder="123-456-7890" required/><br/><br>
+                Would you like to be phoned?<br>
+                <input type="checkbox" name="system_type" id="stype-2" value="1" />Yes<br/> 
+                <input type="checkbox" name="system_type" id="stype-2" value="2" />No<br/> 
+                <br>
+                
+                Please, select the type message: <br>
+                <input type="radio" name="typeInquiry" id="typeInquiry-1" value="question" onchange='adoptionForm();' checked/>Question <br>  
+                <input type="radio" name="typeInquiry" id="typeInquiry-2" value="comment" onchange='adoptionForm();'/>Comment<br>
+                <input type="radio" name="typeInquiry" id="typeInquiry-3" value="status" onchange='adoptionForm(this.value);'/>Status of adoption form<br>
+                <br>
+                <input type="text" name="formNumber" id="formNumber" style='display:none;' placeholder="Enter adoption form number" required /><br/> 
+
+                
+
+                <input type="hidden" name="studentName" id="Name" value="Helen Breyer" /><br/>
+                <input type="hidden" name="studentId" id="studentId" value="120046198" /><br/>
+               <div id="errors"></div>   
+           
+
+          
+             <legend>Message</legend>
+             <textarea name="comments" cols="41" rows="10" placeholder="Tell us more"></textarea> <br>
+             <input type="submit" value="Submit"/>
+             <input type="reset" value="Clear"/>
+         
+         <br/>
+       
+        </div>
+                   
+        </section>
+
+        
+    </form>
+   
+
+      <article id="nodata">
+
+      </article>
+
+    </section>
+  
+    </section>
+    </div>
+
+</article>
+
+
+
+
+<footer>
+    <div id="subscribe-footer">
+        <div class="container">
+          <div class="left">
+        <i class="icon-envelope-alt"></i>
+        <h4>Superheroes Rescue Shelter</h4>
+
+        <a href="contact.html">
+          <img src="images/instagram.png" title="Icons from Freepick Company">
+          </a>
+          <a href="contact.html">
+            <img src="images/facebook2.png" title="Icons from Freepick Company">
+            </a>
+       
+            </div>
+          <i class='icon-chevron-right'></i>
+        <div id="right">
+          <h3>Subscribe to our newsletter!</h3>
+          <p>Want to know more about the work we do? Subscribe!
+              </p>
+          <form
+          action="https://formspree.io/maydznoo"
+          method="POST"
+        >
+          <label>
+            Your email:
+            <input type="text" name="_replyto">
+          </label>
+        
+          <button type="submit">Send</button>
+        </form>
+        </div>
+        </div>
+        </div>
+        
+</footer>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
